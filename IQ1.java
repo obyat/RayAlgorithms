@@ -25,15 +25,11 @@ public class IQ1{
     
     public static void main(String[] args){
         IQ1 iq1 = new IQ1("Robert", 21);
-
-        
         System.out.println(iq1.problem1IsUniqueChars("abccs")); // false
         System.out.println(iq1.problem1IsUniqueChars("ajklsdfjasldkncaklsdnvaslkdjafiopwjefiopwjmfioasndclkasndvclaskdnvjaso")); // false
         System.out.println(iq1.problem1IsUniqueChars("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")); // false
         System.out.println(iq1.problem1IsUniqueChars("abcdefghijklmnopqrstuvwxyz")); // true
         System.out.println(iq1.problem1IsUniqueChars("ABCDEFGHIJKLMNOPQRSTUVWXYZ")); // true
-        System.out.println(iq1.problem1IsUniqueChars("test")); // false
-
-
+        System.out.println(iq1.problem1IsUniqueChars("test")); // false00
     }
 }
