@@ -2,11 +2,11 @@ public class CheckPermutation{
 
     /*
     Chapter: 1, Question: 2. 
-     
+     Given two strings, write a method to decide if one is a permutation of the other.
     */
     /*
         Ideas:
-        1. Insert str1 into HashTable and iterate through Str2 which decreasing count. O(Str1 + Str2) time with O(Str1) space
+        1. Insert str1 into HashTable and iterate through Str2 which decreasing count. O(Str1 + Str2) time with O(Str1) space => best solution but avoid HT overhead with array
         2. Make 0-97 ascii representation of the strings and inc, dec counts based on chars. O(Str1 + Str2) time with O(Str1) space
         3. Merge Sort both strings and check neighbors O(Str1+Str2logStr1+Str2) time and O(Str1+Str2) space
     */
@@ -29,7 +29,7 @@ public class CheckPermutation{
 
     public static void assertTest(Object given, Object args, Object expected){
         if(given != expected) {
-            System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for " + args);
+            System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for: " + args);
         } else {
             System.out.println("[Worked] " + args);
         }
@@ -49,5 +49,4 @@ public class CheckPermutation{
     1. ask about whitespace and case senisitivity
     2. increment index in an array
     3. can trade off space of 128 bits char array or more trade off time with mainting only characters encourtered by 'a' - 97 => 0th index in array
-
     */
