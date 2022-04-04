@@ -5,10 +5,6 @@ public class BoilerPlateClass{
 
     */
     public static boolean Name(String str){
-        /*
-        Ideas:
-
-        */
         return true;
     }
 
@@ -28,6 +24,11 @@ public class BoilerPlateClass{
 }
 
     /*
-    Learned: Different solution, ideas:
+    
+    Ideas:
+        1.
 
+    Learned: Different solution, ideas:
+        1.
+    
     */
