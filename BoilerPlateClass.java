@@ -1,13 +1,33 @@
 public class BoilerPlateClass{
-    private String name;
-    private int age;
-    
-    private BoilerPlateClass(String name, int age){
-        this.name = name;
-        this.age = age;
+
+    /*
+    Chapter: , Question: . 
+
+    */
+    public static boolean Name(String str){
+        /*
+        Ideas:
+
+        */
+        return true;
     }
+
+    public static void assertTest(Object given, Object args, Object expected){
+        if(given != expected) {
+            System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for: " + args);
+        } else {
+            System.out.println("[Worked] " + args);
+        }
+    }
+
     public static void main(String[] args){
-        BoilerPlateClass bpc = new BoilerPlateClass("Robert", 21);
-        System.out.println(bpc.name);
+       // assertTest(isUniqueChars("abc"), "abc", true);
+        assertTest(, "", );
+
     }
 }
+
+    /*
+    Learned: Different solution, ideas:
+
+    */
