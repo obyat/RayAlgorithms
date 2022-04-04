@@ -82,6 +82,8 @@ public class URLify{
         2. Disect strings and use stringBuilder O(str) runtime, O(Str) space
             [Mr%20John%20Smith]
     Learned: Different solution, ideas:
-        1.
+        1. givenStr.toCharArray();
+        2. Strings are immutable
+        3. Some solutions require multiple passes in the array which is O(2n) => O(n) 
     
     */
