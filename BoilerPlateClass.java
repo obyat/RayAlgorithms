@@ -13,7 +13,7 @@ public class BoilerPlateClass{
     }
 
     public static void assertTest(Object given, Object args, Object expected){
-        if(given != expected) {
+        if(!given.equals(expected)) {
             System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for: " + args);
         } else {
             System.out.println("[Worked] " + args);

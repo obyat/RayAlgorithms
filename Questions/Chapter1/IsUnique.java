@@ -5,10 +5,6 @@ Hint: 44,177,132
 */
 public class IsUnique{
 
-    // HashSet ==> O(c) space, O(n) time
-    // An array of ASCII Mappings => O(c) space O(n) time
-    // sort => O(n + k) time or O(nlogn) time for sorting + O(n) time to search the sorted array.
-
     public static boolean isUniqueChars(String str){
         if(str.length() > 26) return false;
         Character[] charSet = new Character[26]; //Assuming English Alphabet
@@ -25,10 +21,10 @@ public class IsUnique{
     }
 
     public static void assertTest(Object given, Object args, Object expected){
-        if(given != expected) {
-            System.out.println("Expected: " + given + ", received: " + expected +  ", for " + args);
+        if(!given.equals(expected)) {
+            System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for: " + args);
         } else {
-            System.out.println(args + ", worked.");
+            System.out.println("[Worked] " + args);
         }
     }
 
@@ -38,10 +34,14 @@ public class IsUnique{
         assertTest(isUniqueChars("ABCDEFGHIKLMNOPQRSTVXYZ"), "ABCDEFGHIKLMNOPQRSTVXYZ", true);
         assertTest(isUniqueChars("ABCDEFGHIKLMNOPQRSTVXYZD"), "ABCDEFGHIKLMNOPQRSTVXYZD", false);
         assertTest(isUniqueChars("asdfjsdlkfjasl;jdfal;sdjfl;asjdf"), "asdfjsdlkfjasl;jdfal;sdjfl;asjdf", false);
-        assertTest(isUniqueChars("abcdefgkoplmz/sldow."), "abcdefgkoplmz/sldow.", true);
+        assertTest(isUniqueChars("abcdefgkoplmz/sldow."), "abcdefgkoplmz/sldow.", false);
 
     }
 }
+
+    // HashSet ==> O(c) space, O(n) time
+    // An array of ASCII Mappings => O(c) space O(n) time
+    // sort => O(n + k) time or O(nlogn) time for sorting + O(n) time to search the sorted array.
 
     /*
     Learned: Different solution, ideas:
