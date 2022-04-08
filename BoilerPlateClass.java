@@ -8,13 +8,14 @@ public class BoilerPlateClass{
         return true;
     }
 
-    public static void assertTest(Object given, Object args, Object expected){
-        if(!given.equals(expected)) {
-            System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for: " + args);
+    public static void assertTest(Object input, Object args, Object expected){
+        if(!input.equals(expected)) {
+            System.out.println("[Failed] expected: " + expected + ", received:" + input +  ", for: " + args);
         } else {
             System.out.println("[Worked] " + args);
         }
     }
+
 
     public static void main(String[] args){
        // assertTest(isUniqueChars("abc"), "abc", true);
