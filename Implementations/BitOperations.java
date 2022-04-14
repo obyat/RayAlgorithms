@@ -1,4 +1,6 @@
 import java.lang.Math;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class BitOperations {
 
@@ -188,6 +190,7 @@ public class BitOperations {
         }
     }
     public static void getith1BitTest(){
+        System.out.println("Get ith 1 bit");
         getith1Bit(0);
         getith1Bit(1);
         getith1Bit(2);
@@ -198,6 +201,7 @@ public class BitOperations {
     }
 
     public static void setithBitTest(){
+        System.out.println("Set ith 1 bit");
         setith1Bit(0);
         setith1Bit(1);
         setith1Bit(2);
@@ -206,6 +210,7 @@ public class BitOperations {
     }
 
     public static void clearith1Bit(){
+        System.out.println("Clear ith 1 bit");
         clearith1Bit(0);
         clearith1Bit(1);
         clearith1Bit(2);
@@ -213,6 +218,46 @@ public class BitOperations {
         System.out.println();
     }
 
+    //Using bit operations to solve problems:
+    public static void printBinary(int x){
+        System.out.println();
+        System.out.print(x +" in binary is: ");
+        for(int i = 8; i>=0; i--){
+            if(i == 4)System.out.print(' ');
+            if((x & (1<<i)) != 0) System.out.print(1);
+            else  System.out.print(0);
+        }
+        System.out.println();
+    }
+
+    // You are given N numbers. Check if there is a subset of them
+    // with the sum equal to target value S. N <= 20
+    public static  HashSet<Integer> subsetSum(int n, int S, int[] a){ 
+        boolean found = false;
+        HashSet<Integer> listSum = new HashSet<Integer>();
+        for(int mask =0; mask < (1 << n); mask++){ // 2^20 or 2^n values 
+            long subSetSumm = 0;
+            for(int i = 0; i < n; i++){ //iterate from 0-n such as 0-20
+                if((mask & (1<<i)) != 0 && (i < a.length)){ //if ith bit is on, this essentially creates all numbers
+                    subSetSumm += a[i];
+                    listSum.add(a[i]);
+                } 
+                if (subSetSumm == S){
+                    found = true;
+
+                    System.out.println("Found");
+                    mask = (1 << n);
+                    i = n;
+                    return listSum; 
+                } 
+            }
+        }
+        if (!found){
+            System.out.println("Not Found");
+        }
+        
+        return null;
+    }  
     public static void main(String[] args) {
         binaryNumbers();
         bitOps();
@@ -222,5 +267,7 @@ public class BitOperations {
         getith1BitTest();
         setithBitTest();
         clearith1Bit();
+        printBinary(5);
+        System.out.println(subsetSum(19, 15, new int[] {3,5,10,500,7}));
     }
 }
