@@ -268,6 +268,6 @@ public class BitOperations {
         setithBitTest();
         clearith1Bit();
         printBinary(5);
-        System.out.println(subsetSum(19, 15, new int[] {3,5,10,500,7}));
+        System.out.println(subsetSum(19,15, new int[] {3,5,10,500,7}));
     }
 }

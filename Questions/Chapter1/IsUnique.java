@@ -20,6 +20,24 @@ public class IsUnique{
         return true;
     }
 
+    //Assume lower case letters only
+    public static boolean isUniqueCharsImproved(String str){
+        int checker = 0;
+        for (int i = 0; i < str.length(); i++){
+            int val = str.charAt(i) - 'a';
+            if((checker & (1 << val)) > 0){ //checking if bit is on
+                return false;
+            }
+            // System.out.println("str.charAt(i): " + str.charAt(i));
+            // System.out.println("val: " + val);
+            // System.out.println("(checker & (1 << val)): " + (checker & (1 << val)));
+            // System.out.println("checker |= (1 << val): " + (checker |= (1 << val)));
+            checker |= (1 << val); // turning on bit. Accumulate the occurence of this character in the checker
+
+        }
+        return true;
+    }
+
     public static void assertTest(Object given, Object args, Object expected){
         if(!given.equals(expected)) {
             System.out.println("[Failed] expected: " + given + ", received: " + expected +  ", for: " + args);
@@ -29,6 +47,7 @@ public class IsUnique{
     }
 
     public static void main(String[] args){
+        System.out.println("Checking isUniqueChars:");
         assertTest(isUniqueChars("abc"), "abc", true);
         assertTest(isUniqueChars("ray"), "ray", true);
         assertTest(isUniqueChars("ABCDEFGHIKLMNOPQRSTVXYZ"), "ABCDEFGHIKLMNOPQRSTVXYZ", true);
@@ -36,6 +55,14 @@ public class IsUnique{
         assertTest(isUniqueChars("asdfjsdlkfjasl;jdfal;sdjfl;asjdf"), "asdfjsdlkfjasl;jdfal;sdjfl;asjdf", false);
         assertTest(isUniqueChars("abcdefgkoplmz/sldow."), "abcdefgkoplmz/sldow.", false);
 
+        System.out.println("\nChecking isUniqueCharsImproved:");
+        assertTest(isUniqueCharsImproved("abc"), "abc", true);
+        assertTest(isUniqueCharsImproved("ray"), "ray", true);
+        assertTest(isUniqueCharsImproved("ABCDEFGHIKLMNOPQRSTVXYZ"), "ABCDEFGHIKLMNOPQRSTVXYZ", true);
+        assertTest(isUniqueCharsImproved("ABCDEFGHIKLMNOPQRSTVXYZD"), "ABCDEFGHIKLMNOPQRSTVXYZD", false);
+        assertTest(isUniqueCharsImproved("asdfjsdlkfjasl;jdfal;sdjfl;asjdf"), "asdfjsdlkfjasl;jdfal;sdjfl;asjdf", false);
+        assertTest(isUniqueCharsImproved("abcdefgkoplmz/sldow."), "abcdefgkoplmz/sldow.", false);
+        assertTest(isUniqueCharsImproved("abcdb"), "abcdb", false);
     }
 }
 
@@ -51,7 +78,11 @@ public class IsUnique{
         - str.charAt(0) of "a" = "a"
     
     2. Character.toLowerCase(str.charAt(0))
+    
     3. a[0] = a
        a[1] = b
        a[2] = c
+    
+    4. Ask if lowercase + uppercase counts as unique
+
     */
