@@ -1,5 +1,3 @@
-import java.lang.Math;
-import java.util.ArrayList;
 import java.util.HashSet;
 
 public class BitOperations {
@@ -268,6 +266,8 @@ public class BitOperations {
         setithBitTest();
         clearith1Bit();
         printBinary(5);
+        printBinary(-2);
+        printBinary(4);
         System.out.println(subsetSum(19,15, new int[] {3,5,10,500,7}));
     }
 }

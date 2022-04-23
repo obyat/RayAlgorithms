@@ -1,4 +1,5 @@
-import java.util.Scanner;
+package HashTableImp;
+
 public class HashFunctionImp {
     WorldList[] theArray;
     int arraySize;

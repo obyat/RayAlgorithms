@@ -63,6 +63,7 @@ public class IsUnique{
         assertTest(isUniqueCharsImproved("asdfjsdlkfjasl;jdfal;sdjfl;asjdf"), "asdfjsdlkfjasl;jdfal;sdjfl;asjdf", false);
         assertTest(isUniqueCharsImproved("abcdefgkoplmz/sldow."), "abcdefgkoplmz/sldow.", false);
         assertTest(isUniqueCharsImproved("abcdb"), "abcdb", false);
+        
     }
 }
 
