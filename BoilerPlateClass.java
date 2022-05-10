@@ -3,6 +3,7 @@ public class BoilerPlateClass{
     /*
     Chapter: , Question: . 
 
+    Hints:
     */
     public static boolean Name(String str){
         return true;
@@ -25,7 +26,9 @@ public class BoilerPlateClass{
 }
 
     /*
-    
+    Questions:
+        1.
+
     Ideas:
         1.
 

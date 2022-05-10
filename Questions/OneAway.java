@@ -5,6 +5,8 @@ public class OneAway{
         There are three types of edits that can be performed on strings: insert a character, 
         remove a character, or replace a character. given two strings, write a function to 
         check if they are one edit (or zero edits) away.
+
+    Hints: 23, 121, 134
     */
 
     //runtime = O(Str1 + Str2 + 26)
