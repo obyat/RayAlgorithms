@@ -5,6 +5,7 @@ public class BoilerPlateClass{
 
     Hints:
     */
+    
     public static boolean Name(String str){
         return true;
     }
@@ -34,7 +35,7 @@ public class BoilerPlateClass{
 
     Edge Cases:
         1. 
-        
+
     Learned: Different solution, ideas:
         1.
     
