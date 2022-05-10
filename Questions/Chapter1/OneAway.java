@@ -35,12 +35,34 @@ public class OneAway{
     }
 
     //runtime = O(min(Str1, Str2))
-    public static boolean oneAway(String str1, String str2){
+    public static boolean oneAwayImproved(String str1, String str2){
         if (abs(str1.length() - str2.length()) > 1) return false;
+        int i1, i2;
+        boolean foundADifference = false;
+        String s1, s2;
+        i1 = i2 = 0;
 
-        int[] charCount = new int[25];
-        int opCount = 0;
+        //str1 == i1 is the shorter string
+        if(str1.length() < str2.length()) {
+            s1 = str1; s2 = str2;
+        } else {
+            s1 = str2; s2 = str1;
+        }
 
+        while(i2 < s2.length() && i1 < s1.length()){
+            if(s1.charAt(i1) != s2.charAt(i2)) {
+                if(foundADifference) return false;
+                foundADifference = true;
+                // if they're the same length and we replaced, then move the now shorter string
+                if(s1.length() == s2.length()) i1++; 
+            
+            } else { //if i1 == i2 move i1 which is the shorter
+                i1++;
+            }
+
+            i2++; // keep moving pointer for longer string str2
+        }
+        return true;
     }
 
     public static void assertTest(Object input, Object args, Object expected){
@@ -63,6 +85,14 @@ public class OneAway{
         assertTest(oneAway("pale", "bake"), "pale, bake", false);
         assertTest(oneAway("pale", "balke"), "pale, balke", false);
         assertTest(oneAway("a", "abb"), "a, abb", false);
+        assertTest(oneAwayImproved("test", "testt"), "test, testt", true);
+        assertTest(oneAwayImproved("pale", "ple"), "pale, ple", true);
+        assertTest(oneAwayImproved("pales", "pale"), "pales, pale", true);
+        assertTest(oneAwayImproved("pale", "bale"), "pale, bale", true);
+        assertTest(oneAwayImproved("pale", "bake"), "pale, bake", false);
+        assertTest(oneAwayImproved("pale", "balke"), "pale, balke", false);
+        assertTest(oneAwayImproved("a", "abb"), "a, abb", false);
+        assertTest(oneAwayImproved("zz", "xz"), "zz, xz", true);
     }
 }
 
@@ -71,6 +101,7 @@ public class OneAway{
     Questions:
         1. What is the max string?
         2. What if we receive the same string? zero edits = true
+        3. Is input limited to english language characters, or do we need to account for all input possibilites such as ints, etc.
 
     Ideas:
         1. take longer string and iterate through it, double four loop, for each character increase count, if found, decrease count, if count is not 1 or 0 then false 
