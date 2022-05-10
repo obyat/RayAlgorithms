@@ -32,6 +32,9 @@ public class BoilerPlateClass{
     Ideas:
         1.
 
+    Edge Cases:
+        1. 
+        
     Learned: Different solution, ideas:
         1.
     

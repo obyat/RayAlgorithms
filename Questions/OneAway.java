@@ -6,7 +6,7 @@ public class OneAway{
         remove a character, or replace a character. given two strings, write a function to 
         check if they are one edit (or zero edits) away.
 
-    Hints: 23, 121, 134
+    Hints: 23, 97, 130
     */
 
     //runtime = O(Str1 + Str2 + 26)
@@ -68,7 +68,10 @@ public class OneAway{
         3. convert string to ascii and increment count of each character, then decrement for second string, 
         4. index first string to an array with counts, in the second string if the value is >0 then subtract, otherwise add. Then go through the array and add the values, if it is 0,1,2, then true, else, false
         5. Put all Characters in hashtable, then check if all chars in Str2 are contained in hashTable and keep count if not, then check count is 0 or 1
-
+        6. pointer solution: increment until a difference is found, then if another difference is found return false, otherwise return true;
+          
+    Edge Cases:
+        1. Length > 1 between strings
     Learned: Different solution, ideas:
         1.
     
