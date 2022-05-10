@@ -33,6 +33,16 @@ public class OneAway{
             return true;
         return false;
     }
+
+    //runtime = O(min(Str1, Str2))
+    public static boolean oneAway(String str1, String str2){
+        if (abs(str1.length() - str2.length()) > 1) return false;
+
+        int[] charCount = new int[25];
+        int opCount = 0;
+
+    }
+
     public static void assertTest(Object input, Object args, Object expected){
         if(!input.equals(expected)) {
             System.out.println("[Failed] expected: " + expected + ", received:" + input +  ", for: " + args);
@@ -72,7 +82,10 @@ public class OneAway{
           
     Edge Cases:
         1. Length > 1 between strings
+
     Learned: Different solution, ideas:
-        1.
+        1. Using pointers is sometimes the best solution
+    
+        
     
     */

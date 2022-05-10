@@ -5,7 +5,8 @@ public class BoilerPlateClass{
 
     Hints:
     */
-    
+
+    //Runtime: 
     public static boolean Name(String str){
         return true;
     }
