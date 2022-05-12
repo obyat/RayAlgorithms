@@ -52,15 +52,12 @@ public class StringCompression{
         }
     }
 
-
     public static void main(String[] args){
         assertTest(stringCompression("abc"), "abc", "abc");
         assertTest(stringCompression("aabcccccaaa"), "aabcccccaaa", "a2b1c5a3");
         assertTest(stringCompression("aabcccccaavaaa"), "aabcccccaavaaa", "a2b1c5a2v1a3");
         assertTest(stringCompression("aabbbbbbbbbbcccccaava"), "aabbbbbbbbbbcccccaava", "a2b10c5a2v1a1");
         assertTest(stringCompression("HeLLLLLLLo"), "HeLLLLLLLo", "H1e1L7o1");
-
-
     }
 }
 
@@ -73,7 +70,6 @@ public class StringCompression{
     Ideas:
         1. While character is still the same, maintain count for each letter, and then append that character and its count using StringBuilder. Only needs one variable.
         2. HashTable with counts, if still the same, increment count, if different, append the character with its count and reset the entire table.
-
 
     Edge Cases:
         1. Input space not letters leads to exit
