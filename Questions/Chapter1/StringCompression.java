@@ -9,7 +9,7 @@ public class StringCompression{
     Hints: 92, 110
     */
 
-    //Runtime: O(str) time + O(1) space
+    //Runtime: O(str) time + O(str*2) space for StringBuilder in worse case
     public static String stringCompression(String str){
   
         int currentCharCount, len;
@@ -39,9 +39,8 @@ public class StringCompression{
                 currentCharCount = 0;
             }
         }
-        if(concatenatedStr.length() < len)
-            return concatenatedStr.toString();
-        return str;
+
+        return concatenatedStr.length() < len ? concatenatedStr.toString() : str;
     }
 
     public static void assertTest(Object input, Object args, Object expected){
