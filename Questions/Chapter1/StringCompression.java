@@ -42,6 +42,58 @@ public class StringCompression{
 
         return concatenatedStr.length() < len ? concatenatedStr.toString() : str;
     }
+    
+    //O(2*str.legnth())
+    public static String stringCompressionSlightlyImproved(String str){
+ 
+        int finalLength = countCompression(str);
+        if(finalLength >= str.length()) return str;
+
+        StringBuilder compressed = new StringBuilder();
+        int countConsecutive = 0;
+        for(int i =0; i < str.length(); i++){
+            countConsecutive++;
+
+            if(i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1 )){
+                compressed.append(str.charAt(i));
+                compressed.append(countConsecutive);
+                countConsecutive = 0;
+            }
+        }
+    return  compressed.toString();
+    }
+    
+    public static int countCompression(String str){
+        int compressedLength = 0;
+        int countConsecutive = 0;
+
+        for(int i =0; i < str.length(); i++){
+            countConsecutive++;
+
+            if(i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1 )){
+                compressedLength += 1 + String.valueOf(countConsecutive).length();
+                countConsecutive = 0;
+            }
+        }
+        return compressedLength;
+    }
+
+    // O(str.legnth())
+    public static String stringCompressionImproved(String str){
+        StringBuilder compressed = new StringBuilder();
+        int countConsecutive = 0;
+        for(int i = 0; i < str.length(); i++){
+            countConsecutive++;
+
+            //if next char is different append it
+            if(i + 1 >= str.length() || str.charAt(i) != str.charAt(i + 1 )){
+                compressed.append(str.charAt(i));
+                compressed.append(countConsecutive);
+                countConsecutive = 0;
+            }
+        }
+    return compressed.length() > str.length() ? str: compressed.toString();
+    }
 
     public static void assertTest(Object input, Object args, Object expected){
         if(!input.equals(expected)) {
@@ -52,6 +104,18 @@ public class StringCompression{
     }
 
     public static void main(String[] args){
+        assertTest(stringCompression("abc"), "abc", "abc");
+        assertTest(stringCompression("aabcccccaaa"), "aabcccccaaa", "a2b1c5a3");
+        assertTest(stringCompression("aabcccccaavaaa"), "aabcccccaavaaa", "a2b1c5a2v1a3");
+        assertTest(stringCompression("aabbbbbbbbbbcccccaava"), "aabbbbbbbbbbcccccaava", "a2b10c5a2v1a1");
+        assertTest(stringCompression("HeLLLLLLLo"), "HeLLLLLLLo", "H1e1L7o1");
+        System.out.println();
+        assertTest(stringCompressionSlightlyImproved("abc"), "abc", "abc");
+        assertTest(stringCompressionSlightlyImproved("aabcccccaaa"), "aabcccccaaa", "a2b1c5a3");
+        assertTest(stringCompressionSlightlyImproved("aabcccccaavaaa"), "aabcccccaavaaa", "a2b1c5a2v1a3");
+        assertTest(stringCompressionSlightlyImproved("aabbbbbbbbbbcccccaava"), "aabbbbbbbbbbcccccaava", "a2b10c5a2v1a1");
+        assertTest(stringCompressionSlightlyImproved("HeLLLLLLLo"), "HeLLLLLLLo", "H1e1L7o1");
+        System.out.println();
         assertTest(stringCompression("abc"), "abc", "abc");
         assertTest(stringCompression("aabcccccaaa"), "aabcccccaaa", "a2b1c5a3");
         assertTest(stringCompression("aabcccccaavaaa"), "aabcccccaavaaa", "a2b1c5a2v1a3");
@@ -73,8 +137,11 @@ public class StringCompression{
     Edge Cases:
         1. Input space not letters leads to exit
         2. Cannot concatinate empty string or string of size 1
+    
+    Pros vs. Cons in solutons:
+        1. Pro: We can avoid creating a string we don't need by counting in advance before we make a string. Con: We must have O(2*Str.legnth()) runtime
 
     Learned: Different solution, ideas:
-        1.
+        1. If work is required regardless of condition, have the work occur first, then the condition. Such as always counting the character regardless of similarity
     
     */

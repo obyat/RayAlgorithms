@@ -17,12 +17,14 @@ public class BoilerPlateClass{
         } else {
             System.out.println("[Worked] " + args);
         }
+        System.out.println();
+
     }
 
 
     public static void main(String[] args){
         // assertTest(isUniqueChars("abc"), "abc", true);
-        // assertTest(, "", );
+        // System.out.println();
 
     }
 }
@@ -36,7 +38,10 @@ public class BoilerPlateClass{
 
     Edge Cases:
         1. 
-
+    
+    Pros vs. Cons in solutons:
+        1.
+    
     Learned: Different solution, ideas:
         1.
     
