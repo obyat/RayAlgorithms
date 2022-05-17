@@ -43,7 +43,8 @@ public class RotateMatrix {
         Integer[][] matrix3 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
         Integer[][] matrix3Rotated = { {7, 4, 1} , {8, 5, 2}, {9, 6, 3} };
 
-        assertArray2DTest(rotateMatrix(matrix3), "matrix10", matrix3Rotated);
+        assertArray2DTest(rotateMatrix(matrix1), "matrix1", matrix1Rotated);
+        assertArray2DTest(rotateMatrix(matrix3), "matrix3", matrix3Rotated);
         System.out.println();
     }
 
