@@ -13,7 +13,7 @@ public class RotateMatrix {
      */
 
 
-    // Runtime:
+    // Runtime: O(nxn) time
     public static Integer[][] rotateMatrix(Integer[][] matrix) {
         if(matrix.length == 0) return matrix;
 
