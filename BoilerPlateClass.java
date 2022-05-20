@@ -52,7 +52,7 @@ public class BoilerPlateClass{
     //requires all methods to return wrapper classes
     public static <T> void assertArray2DTest(T[][] input, Object args, T[][] expected){
         for (int row = 0; row < input.length; row++) {
-            for (int col = 0; col < input.length; col++) {
+            for (int col = 0; col < input[0].length; col++) {
                 if(input[row][col] != expected[row][col]){
                     System.out.println("[MY Array Failed] " + args);
                     return;

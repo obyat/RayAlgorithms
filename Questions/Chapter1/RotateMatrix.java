@@ -15,36 +15,44 @@ public class RotateMatrix {
 
     // Runtime:
     public static Integer[][] rotateMatrix(Integer[][] matrix) {
-        Integer temp;
-        int matrrowLen = 2;//matrix.length - 1;
-        System.out.println(matrrowLen);
-        int matrcolLen = 2;//matrix[matrrowLen].length - 1;
-        Integer[][] rotatedMatrix = new Integer[3][3];
+        if(matrix.length == 0) return matrix;
+
+        int matrrowLen = matrix.length ;//4
+        int matrcolLen = matrix[matrrowLen - 1].length;//3
+        Integer[][] rotatedMatrix = new Integer[matrcolLen][matrix.length];
 
         for (int row = 0; row < matrix.length; row++) {
             for (int col = 0; col < matrix[row].length; col++) {
-                rotatedMatrix[col][matrrowLen] = matrix[row][col];
-                temp = matrix[row][col];
-                // System.out.println(temp);
+                rotatedMatrix[col][matrrowLen - 1] = matrix[row][col];
             }
             matrrowLen--;
         }
-        System.out.println(Arrays.deepToString(rotatedMatrix));
+        // System.out.println(Arrays.deepToString(rotatedMatrix));
         return rotatedMatrix;
     }
 
     public static void main(String[] args) {
-        Integer[][] matrix1 = { {1, 2}, {3, 4} };
+        Integer[][] matrix1 = { {0, 1} };
         // [1,2
         // 3,4]
-        Integer[][] matrix1Rotated = { {3, 1}, {4, 2} };
+        Integer[][] matrix1Rotated = { {0}, {1} };
+        Integer[][] matrix2 = { {1, 2}, {3, 4} };
+        // [1,2
+        // 3,4]
+        Integer[][] matrix2Rotated = { {3, 1}, {4, 2} };
         // [3,1
         // 4,2]
         Integer[][] matrix3 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
         Integer[][] matrix3Rotated = { {7, 4, 1} , {8, 5, 2}, {9, 6, 3} };
 
+        Integer[][] matrix4 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 2, 3} };
+        Integer[][] matrix4Rotated = { {1, 7, 4, 1} , {2, 8, 5, 2}, {3, 9, 6, 3}};
+
         assertArray2DTest(rotateMatrix(matrix1), "matrix1", matrix1Rotated);
+        assertArray2DTest(rotateMatrix(matrix2), "matrix2", matrix2Rotated);
         assertArray2DTest(rotateMatrix(matrix3), "matrix3", matrix3Rotated);
+        assertArray2DTest(rotateMatrix(matrix4), "matrix4", matrix4Rotated);
+
         System.out.println();
     }
 
@@ -89,9 +97,9 @@ public class RotateMatrix {
     //requires all methods to return wrapper classes
     public static <T> void assertArray2DTest(T[][] input, Object args, T[][] expected){
         for (int row = 0; row < input.length; row++) {
-            for (int col = 0; col < input.length; col++) {
+            for (int col = 0; col < input[0].length; col++) {
                 if(input[row][col] != expected[row][col]){
-                    System.out.println("[MY Array Failed] " + args);
+                    System.out.println("[Array Failed] " + args);
                     return;
                 }
             }
