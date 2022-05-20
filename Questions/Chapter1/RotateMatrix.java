@@ -18,7 +18,7 @@ public class RotateMatrix {
         if(matrix.length == 0) return matrix;
 
         int matrrowLen = matrix.length ;//4
-        int matrcolLen = matrix[matrrowLen - 1].length;//3
+        int matrcolLen = matrix[matrrowLen - 1].length;//4 selecting a row and getting its length
         Integer[][] rotatedMatrix = new Integer[matrcolLen][matrix.length];
 
         for (int row = 0; row < matrix.length; row++) {
@@ -32,8 +32,8 @@ public class RotateMatrix {
     }
 
     public static void main(String[] args) {
-        Integer[][] matrix = {};
-        Integer[][] matrixRotated = {};
+        Integer[][] matrixEmpty = {};
+        Integer[][] matrixEmptyRotated = {};
         Integer[][] matrix0 = { {0} };
         Integer[][] matrix0Rotated = { {0} };
         Integer[][] matrix1 = { {0, 1} };
@@ -50,7 +50,7 @@ public class RotateMatrix {
         Integer[][] matrix4 = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {1, 2, 3} };
         Integer[][] matrix4Rotated = { {1, 7, 4, 1} , {2, 8, 5, 2}, {3, 9, 6, 3}};
 
-        assertArray2DTest(rotateMatrix(matrix), "matrix", matrixRotated);
+        assertArray2DTest(rotateMatrix(matrixEmpty), "matrixEmpty", matrixEmptyRotated);
         assertArray2DTest(rotateMatrix(matrix0), "matrix0", matrix0Rotated);
         assertArray2DTest(rotateMatrix(matrix1), "matrix1", matrix1Rotated);
         assertArray2DTest(rotateMatrix(matrix2), "matrix2", matrix2Rotated);
