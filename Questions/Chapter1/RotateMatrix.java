@@ -73,15 +73,14 @@ public class RotateMatrix {
             for(int i = first; i < last; i++){
                 int offset = i - first;
                 int top = matrix[first][i];
-                //topLeft -> topRight
-                matrix[first][i] = matrix[last-offset][first];
 
+                
+                //botomLeft -> topLeft
+                matrix[first][i] = matrix[last-offset][first];
                 //bottomRight -> BottomLeft
                 matrix[last-offset][first] = matrix[last][last-offset];
-
                 //TopRight -> bottomRight
                 matrix[last][last-offset] = matrix[i][last];
-
                 //top -> Topright
                 matrix[i][last] = top;
             }
