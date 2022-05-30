@@ -1,4 +1,4 @@
-package HashTableImp;
+package DataStructures.HashTableImp;
 
 public class HashFunctionImp {
     WorldList[] theArray;

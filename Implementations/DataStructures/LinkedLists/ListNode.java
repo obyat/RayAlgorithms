@@ -1,3 +1,5 @@
+package DataStructures.LinkedLists;
+
 public class ListNode<T>{
     private T data;
     private ListNode<T> next;

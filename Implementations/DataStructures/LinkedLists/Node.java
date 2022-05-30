@@ -1,3 +1,5 @@
+package DataStructures.LinkedLists;
+
 //Also referred to as LinkedList
 public class Node {
     Node next = null;
