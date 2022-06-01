@@ -1,5 +1,3 @@
-package DataStructures.LinkedLists;
-
 public class DllNode {
     int data;
     DllNode prev;
@@ -17,18 +15,17 @@ public class DllNode {
         return clone;
     }
 
-    
-
     void PrintLinkedList(){
         DllNode tempCopy = cloneNode(this);
         if(tempCopy != null) System.out.println(tempCopy.data);
         while(tempCopy.next != null){
+            //only changing the next for tempcopy. Therefore the enxt for the head has not changed
             System.out.println(tempCopy.next.data);
-            tempCopy.next = tempCopy.next.next;
+            tempCopy = tempCopy.next;
         }
     }
     
     public static void main(String[] args) {
-        
+        System.out.println("DllNode Ran");
     }
 }

@@ -1,13 +1,9 @@
-package DataStructures.LinkedLists;
-import DataStructures.LinkedLists.DllNode;
-
 class DoublyLinkedList{
     DllNode head;
 
     public DoublyLinkedList(DllNode head){
         this.head = head;
     }
-
 
     void addToEnd(int data){
         DllNode n = new DllNode(data);
@@ -18,7 +14,6 @@ class DoublyLinkedList{
             DllNode curr = head;
             while(curr.next != null){
                 curr = curr.next;
-                
             }
             curr.next = n;
             n.prev = curr;
@@ -68,7 +63,7 @@ class DoublyLinkedList{
         return toDelete.prev.next = null;
     }
     
-    //O(n)
+    //O(1)
     DllNode deleteStartNode(){
         DllNode toDelete = head;
         if(head == null || head.next == null){
@@ -109,14 +104,22 @@ class DoublyLinkedList{
 
         // before.PrintLinkedList();
         DoublyLinkedList ddl = new DoublyLinkedList(before);
-        ddl.addToStart(1);
-        ddl.addToStart(0);
+        // ddl.addToStart(1);
+        // ddl.addToStart(0);
 
-        ddl.addToEnd(10);
-        ddl.addToEnd(100);
+        // ddl.addToEnd(10);
+        // ddl.addToEnd(100);
         
-        ddl.deletelast();
-        ddl.deleteStartNode();
-        ddl.head.PrintLinkedList();
+        // ddl.deletelast();
+        // ddl.deleteStartNode();
+        // ddl.head.PrintLinkedList();
+        DllNode t1 = new DllNode(100);
+        DoublyLinkedList ddl1 = new DoublyLinkedList(t1);
+        ddl1.addToEnd(101);
+        ddl1.addToEnd(102);
+        ddl1.addAfter(ddl1.head, 102, 1022);
+        ddl1.addToEnd(103);
+        ddl1.addToStart(99);
+        ddl1.head.PrintLinkedList();
     }
 }
