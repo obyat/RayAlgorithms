@@ -1,13 +1,13 @@
-package DataStructures.LinkedLists;
+package Chapter2.LinkedLists;
 
-class DoublyLinkedList{
-    DllNode head;
+public class DoublyLinkedList{
+    public DllNode head;
 
     public DoublyLinkedList(DllNode head){
         this.head = head;
     }
 
-    void addToEnd(int data){
+    public void addToEnd(int data){
         DllNode n = new DllNode(data);
 
         if(head == null){
@@ -77,6 +77,18 @@ class DoublyLinkedList{
         return toDelete;
     }
 
+    public String toString(){
+        String str = "[";
+        DllNode n = this.head;
+        while(n.next != null){
+            str = str + n.data + ", ";
+            n = n.next;
+        }
+        str += n.data;
+        str += "]";
+        return str;
+    }
+    
     //O(n)
     DllNode deleteAfter(int data){
         DllNode toDelete = head;
@@ -122,6 +134,7 @@ class DoublyLinkedList{
         ddl1.addAfter(ddl1.head, 102, 1022);
         ddl1.addToEnd(103);
         ddl1.addToStart(99);
-        ddl1.head.PrintLinkedList();
+        ddl1.head.printLinkedList();
+        System.out.println(ddl1.toString());
     }
 }

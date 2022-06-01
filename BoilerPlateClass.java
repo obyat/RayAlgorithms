@@ -12,7 +12,7 @@ public class BoilerPlateClass{
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args){ 
         // assertTest(isUniqueChars("abc"), "abc", true);
         // assertArray2DTest(matrix1Rotated, "matrix10", matrix1Rotated);
         // System.out.println();

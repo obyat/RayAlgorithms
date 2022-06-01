@@ -1,9 +1,9 @@
-package DataStructures.LinkedLists;
+package Chapter2.LinkedLists;
 
 public class DllNode {
-    int data;
-    DllNode prev;
-    DllNode next;
+    public int data;
+    public DllNode prev;
+    public DllNode next;
 
     public DllNode(int data){
         this.data = data;
@@ -17,7 +17,7 @@ public class DllNode {
         return clone;
     }
 
-    void PrintLinkedList(){
+    public void printLinkedList(){
         DllNode tempCopy = cloneNode(this);
         if(tempCopy != null) System.out.println(tempCopy.data);
         while(tempCopy.next != null){
