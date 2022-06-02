@@ -79,12 +79,14 @@ public class DoublyLinkedList{
 
     public String toString(){
         String str = "[";
-        DllNode n = this.head;
-        while(n.next != null){
-            str = str + n.data + ", ";
-            n = n.next;
+        if(this != null){
+            DllNode n = this.head;
+            while(n.next != null){
+                str = str + n.data + ", ";
+                n = n.next;
+            }
+            str += n.data;
         }
-        str += n.data;
         str += "]";
         return str;
     }

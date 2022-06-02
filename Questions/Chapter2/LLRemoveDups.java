@@ -17,23 +17,14 @@ public class LLRemoveDups{
 
     //Runtime: O(n) time, O(n) space
     public static DoublyLinkedList RemoveDups(DoublyLinkedList list){
+        if(list == null) return list;
         HashSet<Integer> hs = new HashSet<Integer>();
         DllNode curr = list.head;
-        // DoublyLinkedList list2 = new DoublyLinkedList(curr);
-        // if(curr != null) hs.add(curr.data);
-        //  while(curr.next != null){
-        //     if(hs.contains(curr.data)) {
-        //             curr.prev = curr.next;
-        //             curr.next.prev = curr.prev;
-        //     } else {
-        //         hs.add(curr.data);
-        //     }
-        //     curr = curr.next;
-        // }
         DoublyLinkedList previous = null;
         while(curr != null){
             if(hs.contains(curr.data)){
                 previous.head.next = curr.next;
+                previous.head.next.next = curr.next;
             } else {
                 hs.add(curr.data);
                 previous = list;
@@ -43,7 +34,27 @@ public class LLRemoveDups{
         return previous;
     }
 
+
+    //Runtime: O(n) time, O(n) space
+    public static DoublyLinkedList RemoveDupsWithMoreTime (DoublyLinkedList list){
+        if(list == null) return list;
+        HashSet<Integer> hs = new HashSet<Integer>();
+        DllNode curr = list.head;
+        DoublyLinkedList previous = null;
+        while(curr != null){
+            if(hs.contains(curr.data)){
+                previous.head.next = curr.next;
+                previous.head.next.next = curr.next;
+            } else {
+                hs.add(curr.data);
+                previous = list;
+            }
+            curr = curr.next;
+        }
+        return previous;
+    }
     public static DoublyLinkedList  createLL(Integer[] arr){
+        if(arr.length <= 0) return null;
         DllNode node = new DllNode(arr[0]);
         DoublyLinkedList  list = new DoublyLinkedList (node);
         for (int i = 1; i < arr.length; i++) list.addToEnd(arr[i]);
@@ -51,6 +62,9 @@ public class LLRemoveDups{
     }
 
     public static void main(String[] args){ 
+        DoublyLinkedList l0 = createLL(new Integer[] {0});
+        DoublyLinkedList l0Copy = createLL(new Integer[] {0});
+        DoublyLinkedList l0Sol = createLL(new Integer[] {0});
 
         DoublyLinkedList l1 = createLL(new Integer[] {0,1,1,2,3});
         DoublyLinkedList l1Copy = createLL(new Integer[] {0,1,1,2,3});
@@ -61,10 +75,13 @@ public class LLRemoveDups{
         DoublyLinkedList l2Sol = createLL(new Integer[] {1,2,3});
 
         DoublyLinkedList l3 = createLL(new Integer[] {0,0,2,2,3});
+        DoublyLinkedList l3Copy = createLL(new Integer[] {0,0,2,2,3});
         DoublyLinkedList l3Sol = createLL(new Integer[] {0,2,3});
 
-        assertTest(RemoveDups(l1), l1Copy, l1Sol);
-        assertTest(RemoveDups(l2), l2Copy, l2Sol);
+        assertTest(RemoveDups(l0).toString(), l0Copy, l0Sol.toString());
+        assertTest(RemoveDups(l1).toString(), l1Copy, l1Sol.toString());
+        assertTest(RemoveDups(l2).toString(), l2Copy, l2Sol.toString());
+        assertTest(RemoveDups(l3).toString(), l3Copy, l3Sol.toString());
 
         // l1.head.printLinkedList();
 
