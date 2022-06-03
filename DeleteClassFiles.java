@@ -5,12 +5,13 @@ import java.io.File;
  * folders recursively in java
  * @author pankaj
  */
-public class DeleteFolderRecursively {
+public class DeleteClassFiles {
 
     public static void main(String[] args) {
-        String folder = "./RayAlgorithms";
+        String folder = "./";
         //delete folder recursively
         recursiveDelete(new File(folder));
+        System.out.println("Removed all class files");
     }
     
     public static void recursiveDelete(File file) {
@@ -22,13 +23,14 @@ public class DeleteFolderRecursively {
         if (file.isDirectory()) {
             for (File f : file.listFiles()) {
                 //call recursively
-                if(file.getName() == "*.class")
                 recursiveDelete(f);
             }
         }
         //call delete to delete files and empty directory
+        if(file.getName().toString().matches(".*\\.class")) {
         file.delete();
-        System.out.println("Deleted file/folder: "+file.getAbsolutePath());
-    }
+        System.out.println("deleted: "+ file.getName().toString());
+        }
 
+    }
 }
