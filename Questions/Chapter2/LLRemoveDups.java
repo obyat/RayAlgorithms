@@ -1,8 +1,9 @@
 package Chapter2;
 
 import java.util.HashSet;
-import Chapter2.LinkedLists.DoublyLinkedList ;
+
 import Chapter2.LinkedLists.DllNode;
+import Chapter2.LinkedLists.DoublyLinkedList ;
 public class LLRemoveDups{
 
     /*
@@ -49,8 +50,7 @@ public class LLRemoveDups{
         return list;
     }
 
-    //O(n^2) time. O(1) space
-    public static DoublyLinkedList  createLL(Integer[] arr){
+    public static DoublyLinkedList createLL(Integer[] arr){
         if(arr.length <= 0) return null;
         DllNode node = new DllNode(arr[0]);
         DoublyLinkedList  list = new DoublyLinkedList (node);

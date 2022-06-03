@@ -42,9 +42,9 @@ public class BoilerPlateClass{
     //use Arrays.toString(array)
     public static void assertTest(Object input, Object args, Object expected){
         if(!input.equals(expected)) {
-            System.out.println("[Failed] expected: " + expected + ", received:" + input +  ", for: " + args);
+            System.out.println("[Failed] expected: " + expected + ", received: " + input +  ", for: " + args);
         } else {
-            System.out.println("[Worked] " + args);
+            System.out.println("[Passed] " + args);
         }
         System.out.println();
     }
@@ -59,6 +59,6 @@ public class BoilerPlateClass{
                 }
             }
         }
-            System.out.println("[Array Worked] " + args);
+            System.out.println("[Array Passed] " + args);
     }
 }
