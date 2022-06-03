@@ -1,9 +1,6 @@
 package Chapter2;
 
-import java.util.Arrays;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
 import Chapter2.LinkedLists.DoublyLinkedList ;
 import Chapter2.LinkedLists.DllNode;
 public class LLRemoveDups{
