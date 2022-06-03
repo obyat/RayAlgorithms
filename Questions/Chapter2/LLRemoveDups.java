@@ -23,8 +23,7 @@ public class LLRemoveDups{
         DoublyLinkedList previous = null;
         while(curr != null){
             if(hs.contains(curr.data)){
-                previous.head.next = curr.next;
-                previous.head.next.next = curr.next;
+                previous.head.next = curr;
             } else {
                 hs.add(curr.data);
                 previous = list;
@@ -33,26 +32,27 @@ public class LLRemoveDups{
         }
         return previous;
     }
-
 
     //Runtime: O(n) time, O(n) space
     public static DoublyLinkedList RemoveDupsWithMoreTime (DoublyLinkedList list){
-        if(list == null) return list;
-        HashSet<Integer> hs = new HashSet<Integer>();
-        DllNode curr = list.head;
-        DoublyLinkedList previous = null;
-        while(curr != null){
-            if(hs.contains(curr.data)){
-                previous.head.next = curr.next;
-                previous.head.next.next = curr.next;
+        DllNode i = list.head;
+
+        while(i != null){
+            DllNode j = i;
+            while(j.next != null){
+            if(j.next.data == i.data){
+                j.next = j.next.next;
             } else {
-                hs.add(curr.data);
-                previous = list;
+                //iterate through the linkedlist
+                j = j.next;
             }
-            curr = curr.next;
         }
-        return previous;
+            i = i.next;
+        }
+        return list;
     }
+
+    //O(n^2) time. O(1) space
     public static DoublyLinkedList  createLL(Integer[] arr){
         if(arr.length <= 0) return null;
         DllNode node = new DllNode(arr[0]);
@@ -82,8 +82,11 @@ public class LLRemoveDups{
         assertTest(RemoveDups(l1).toString(), l1Copy, l1Sol.toString());
         assertTest(RemoveDups(l2).toString(), l2Copy, l2Sol.toString());
         assertTest(RemoveDups(l3).toString(), l3Copy, l3Sol.toString());
-
-        // l1.head.printLinkedList();
+        System.out.println("RemoveDupsWithMoreTime:\n");
+        assertTest(RemoveDupsWithMoreTime(l0).toString(), l0Copy, l0Sol.toString());
+        assertTest(RemoveDupsWithMoreTime(l1).toString(), l1Copy, l1Sol.toString());
+        assertTest(RemoveDupsWithMoreTime(l2).toString(), l2Copy, l2Sol.toString());
+        assertTest(RemoveDupsWithMoreTime(l3).toString(), l3Copy, l3Sol.toString());
 
     }
 
@@ -107,7 +110,8 @@ public class LLRemoveDups{
         1.
     
     Mistakes:
-        1. 
+        1. Unsure how to iterate through a linkedlist
+        2. Unsure how to take the first element but skip the second 
     */
 
     //use Arrays.toString(array)
