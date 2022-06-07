@@ -1,11 +1,9 @@
 package Chapter2;
-import Generic.TESTSUIT;
-
 import Chapter2.LinkedLists.DllNode;
 import Chapter2.LinkedLists.DoublyLinkedList ;
+import Generic.TESTSUIT;
 
-
-public class BoilerPlateClass{
+public class LLPalindrome{
 
     /*
     Chapter: , Question: . 
