@@ -3,7 +3,7 @@ import Chapter2.LinkedLists.DllNode;
 import Chapter2.LinkedLists.DoublyLinkedList ;
 public class DeleteMiddleNode{
 
-    /*
+    /*l
     Chapter: 2, Question: 3. 
         Implement an algorithm to delete a any middle node of a LinkedList, given only access to that node
         but not the first or last node
