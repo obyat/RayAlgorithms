@@ -1,7 +1,4 @@
 package Chapter2;
-
-import java.util.HashSet;
-
 import Chapter2.LinkedLists.DllNode;
 import Chapter2.LinkedLists.DoublyLinkedList ;
 public class DeleteMiddleNode{

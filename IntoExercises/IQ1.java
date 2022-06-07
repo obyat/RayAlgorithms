@@ -1,3 +1,5 @@
+package IntoExercises;
+
 import java.util.Arrays;
 
 public class IQ1{
