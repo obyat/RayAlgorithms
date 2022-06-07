@@ -109,6 +109,16 @@ public class DoublyLinkedList{
         return toDelete;
     }
 
+    public int size(){
+        int size = 0;
+        DllNode n = this.head;
+        while(n.next != null){
+            size++;
+            n = n.next;
+        }
+        return size;
+    }
+    
     public static void main(String[] args) {
         DllNode head = new DllNode(5);
         DllNode after = new DllNode(7);
@@ -138,5 +148,6 @@ public class DoublyLinkedList{
         ddl1.addToStart(99);
         ddl1.head.printLinkedList();
         System.out.println(ddl1.toString());
+        System.out.println(ddl1.size());
     }
 }
