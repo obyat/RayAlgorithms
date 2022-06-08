@@ -8,7 +8,7 @@ public class LLRemoveDups{
 
     /*
     Chapter: 2, Question: 1. 
-        write Code to remove duplicates from an unsorted linkedlist
+        write Code to remove duplicates from a sorted linkedlist
 
     Hints: 9, 40
     */
@@ -17,18 +17,28 @@ public class LLRemoveDups{
     public static DoublyLinkedList RemoveDups(DoublyLinkedList list){
         if(list == null) return list;
         HashSet<Integer> hs = new HashSet<Integer>();
+        
         DllNode curr = list.head;
-        DoublyLinkedList previous = null;
+        DoublyLinkedList newlist = new DoublyLinkedList(new DllNode(curr.data));
+        DllNode originalHead = newlist.head;
+
+        if(curr.next != null) {
+            hs.add(curr.data);
+            curr = curr.next;
+        } else {
+            return newlist;
+        }
+        // [0]->[1]
         while(curr != null){
-            if(hs.contains(curr.data)){
-                previous.head.next = curr;
-            } else {
+            if(!hs.contains(curr.data)){
                 hs.add(curr.data);
-                previous = list;
+                newlist.head.next = new DllNode(curr.data);
+                newlist.head = newlist.head.next;
             }
             curr = curr.next;
         }
-        return previous;
+        newlist.head = originalHead;
+        return newlist;
     }
 
     //Runtime: O(n) time, O(n) space
@@ -38,15 +48,17 @@ public class LLRemoveDups{
         while(i != null){
             DllNode j = i;
             while(j.next != null){
-            if(j.next.data == i.data){
-                j.next = j.next.next;
-            } else {
-                //iterate through the linkedlist
-                j = j.next;
+                if(j.next.data == i.data){
+                    j.next = j.next.next;
+                } else {
+                    //iterate through the linkedlist
+                    j = j.next;
+                }
             }
-        }
             i = i.next;
         }
+        
+        //modify and return the given list
         return list;
     }
 
@@ -63,16 +75,16 @@ public class LLRemoveDups{
         DoublyLinkedList l0Copy = createLL(new Integer[] {0});
         DoublyLinkedList l0Sol = createLL(new Integer[] {0});
 
-        DoublyLinkedList l1 = createLL(new Integer[] {0,1,1,2,3});
-        DoublyLinkedList l1Copy = createLL(new Integer[] {0,1,1,2,3});
-        DoublyLinkedList l1Sol = createLL(new Integer[] {0,1,2,3});
+        DoublyLinkedList l1 = createLL(new Integer[] {0,1,1,2,0});
+        DoublyLinkedList l1Copy = createLL(new Integer[] {0,1,1,2,0});
+        DoublyLinkedList l1Sol = createLL(new Integer[] {0,1,2});
 
         DoublyLinkedList l2 = createLL(new Integer[] {1,2,2,3});
         DoublyLinkedList l2Copy = createLL(new Integer[] {1,2,2,3});
         DoublyLinkedList l2Sol = createLL(new Integer[] {1,2,3});
 
-        DoublyLinkedList l3 = createLL(new Integer[] {0,0,2,2,3});
-        DoublyLinkedList l3Copy = createLL(new Integer[] {0,0,2,2,3});
+        DoublyLinkedList l3 = createLL(new Integer[] {0,0,2,0,3});
+        DoublyLinkedList l3Copy = createLL(new Integer[] {0,0,2,0,3});
         DoublyLinkedList l3Sol = createLL(new Integer[] {0,2,3});
 
         assertTest(RemoveDups(l0).toString(), l0Copy, l0Sol.toString());
@@ -89,7 +101,7 @@ public class LLRemoveDups{
 
     /*
     Questions:
-        1.
+        1. 
 
     Ideas:
         1. Sort the list and check if head and head.next are the same and make head.next = head.next.next
@@ -104,7 +116,7 @@ public class LLRemoveDups{
         1. Can either have O(n^2) time cost or O(n) space cost.
     
     Learned: Different solution, ideas:
-        1.
+        1. To rest the head position, just save the HeadNode!!
     
     Mistakes:
         1. Unsure how to iterate through a linkedlist
