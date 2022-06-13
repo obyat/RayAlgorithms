@@ -110,7 +110,7 @@ public class DoublyLinkedList{
     }
 
     public int size(){
-        int size = 0;
+        int size = 1;
         DllNode n = this.head;
         while(n.next != null){
             size++;

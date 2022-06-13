@@ -17,6 +17,16 @@ public class DllNode {
         return clone;
     }
 
+    public int size(){
+        int size = 1;
+        DllNode n = this;
+        while(n.next != null){
+            size++;
+            n = n.next;
+        }
+        return size;
+    }
+
     public void printLinkedList(){
         DllNode tempCopy = cloneNode(this);
         if(tempCopy != null) System.out.println(tempCopy.data);
