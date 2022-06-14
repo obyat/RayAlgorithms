@@ -6,14 +6,23 @@ import Chapter2.LinkedLists.DllNode;
 public class TESTSUIT {
         //use Arrays.toString(array)
         public static void assertTest(Object input, Object args, Object expected){
-            if(!input.equals(expected)) {
-                System.out.println("[Failed] expected: " + expected + ", received: " + input +  ", for: " + args);
+            if(input != null){
+                if(!input.equals(expected)) {
+                    System.out.println("[Failed] expected: " + expected + ", received: " + input +  ", for: " + args);
+                } else {
+                    System.out.println("[Passed] " + args);
+                }            
             } else {
-                System.out.println("[Passed] " + args);
+                if(expected == null){
+                    System.out.println("[Passed] " + args);
+                } else {
+                    System.out.println("[Failed] expected: " + expected + ", received: null" +  ", for: " + args);
+                }
             }
+
             System.out.println();
         }
-    
+        
         //requires all methods to return wrapper classes
         public static <T> void assertArray2DTest(T[][] input, Object args, T[][] expected){
             for (int row = 0; row < input.length; row++) {

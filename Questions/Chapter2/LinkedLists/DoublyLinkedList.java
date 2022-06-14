@@ -119,6 +119,12 @@ public class DoublyLinkedList{
         return size;
     }
     
+    public DoublyLinkedList cloneList(DoublyLinkedList list){
+        DoublyLinkedList clone = new DoublyLinkedList(list.head);
+        clone.head.next = list.head.next;
+        return clone;
+    }
+    
     public static void main(String[] args) {
         DllNode head = new DllNode(5);
         DllNode after = new DllNode(7);
