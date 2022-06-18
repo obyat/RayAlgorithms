@@ -46,7 +46,6 @@ public class LoopDetection{
 
         //Move slow to head. Kepp fast at meeting point. Each are k steps from the loop start.
         //If they move at the same pace, they must meet at loop start.
-
         slow = list.head;
         while(slow != fast) {
             slow = slow.next;
