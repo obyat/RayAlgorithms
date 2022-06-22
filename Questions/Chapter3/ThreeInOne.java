@@ -5,19 +5,19 @@ import Chapter2.LinkedLists.DllNode;
 import Chapter2.LinkedLists.DoublyLinkedList ;
 
 
-public class BoilerPlateClass{
+public class ThreeInOne{
 
     /*
-    Chapter: 3, Question: . 
+    Chapter: 3, Question: 1.
+        Describe how you could use a single array to implement three stacks. 
 
-    Hints:
+    Hints: 2 12 38 58
     */
 
     //Runtime: 
     public static boolean Name(String str){
         return true;
     }
-
 
     public static void main(String[] args){ 
         // TESTSUIT.assertTest(isUniqueChars("abc"), "abc", true);
