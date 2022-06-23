@@ -2,10 +2,10 @@ package DataStructures;
 import java.util.EmptyStackException;
 
 public class Stack<T> {
+    private int size = 0;
     private static class StackNode<T> {
         private T data;
         private StackNode<T> next;
-
         public StackNode(T data){
             this.data = data;
         }
@@ -23,6 +23,7 @@ public class Stack<T> {
         StackNode<T> t = new StackNode<T>(item);
         t.next = top;
         top = t;
+        size++;
     }
 
     public T peek(){
@@ -32,6 +33,10 @@ public class Stack<T> {
 
     public boolean isEmpty(){
         return top == null;
+    }
+
+    public int size(){
+        return this.size;
     }
 
     public static void main(String[] args) {

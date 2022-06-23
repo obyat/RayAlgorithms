@@ -48,7 +48,7 @@ public class StackOfPlates<T> {
             top.stack.push(item);
         }
     }
-
+    //Runtime O(n*2) for ArrayList + O(n) for stacks
     private void CreateNewStack(T item){
         top = new StackListClass<T>();
         stackList.add(top.stack);
@@ -84,7 +84,7 @@ public class StackOfPlates<T> {
         return index;
     }
 
-    public static void main(String[] args) {
+public static void main(String[] args) {
         StackOfPlates<Integer> intStack = new StackOfPlates<Integer>();
         
         System.out.println("push:");
