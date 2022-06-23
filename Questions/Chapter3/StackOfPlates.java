@@ -48,6 +48,7 @@ public class StackOfPlates<T> {
             top.stack.push(item);
         }
     }
+    
     //Runtime O(n*2) for ArrayList + O(n) for stacks
     private void CreateNewStack(T item){
         top = new StackListClass<T>();
