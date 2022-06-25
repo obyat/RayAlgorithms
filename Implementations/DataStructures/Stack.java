@@ -19,8 +19,8 @@ public class Stack<T> {
         return item;
     }
 
-    public void push(T item){
-        StackNode<T> t = new StackNode<T>(item);
+    public void push(T temp){
+        StackNode<T> t = new StackNode<T>(temp);
         t.next = top;
         top = t;
         size++;
@@ -39,12 +39,63 @@ public class Stack<T> {
         return this.size;
     }
 
+    public <T> Stack<T> sort(){
+        Stack<T> stack = (Stack<T>) this;
+        Stack sortedStack;
+        if(stack.isEmpty()) {
+            return stack;
+        } else if(stack.peek() instanceof Integer){
+             sortedStack = new Stack<Integer>();
+            while(!stack.isEmpty()){
+                int temp = (int) stack.pop();
+                while(!sortedStack.isEmpty() && ((int) sortedStack.peek() > temp)){
+                    stack.push((T) sortedStack.pop());
+                }
+                sortedStack.push(temp);
+            }
+        } else {
+           sortedStack = new Stack<T>();
+            T temp = null;
+            sortedStack.push(stack.pop());
+            while(!stack.isEmpty()){
+                temp = stack.pop();
+                if( ( (String.valueOf(temp)).compareTo( String.valueOf(sortedStack.peek()) ) ) >= 0){
+                    sortedStack.push(temp);
+                } else {
+                    while(!sortedStack.isEmpty() && ((String.valueOf(temp)).compareTo( String.valueOf(sortedStack.peek()) ) ) < 0){
+                        stack.push((T) sortedStack.pop());
+                    }
+                    sortedStack.push(temp);
+                }
+            }
+        
+        }
+
+        return sortedStack;
+    }
+
+
+    public String toString(){
+        Stack<T> copy = this;
+        StringBuilder str = new StringBuilder();
+        str.append("[");
+        while(!copy.isEmpty()){
+            str.append(copy.pop() + ", ");
+        }
+        str.append("]");
+        return str.toString();
+    }
+
     public static void main(String[] args) {
         Stack<Integer> intStack = new Stack<Integer>();
-        intStack.push(1);
-        intStack.push(2);
-        intStack.push(3);
+        intStack.push(10);
+        intStack.push(13);
+        intStack.push(17);
+        intStack.push(16);
+        intStack.push(16);
         System.out.println(intStack.pop());
         System.out.println(intStack.peek());
+        System.out.println((intStack.sort()).toString());
+
     }
 }
