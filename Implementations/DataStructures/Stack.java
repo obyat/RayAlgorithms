@@ -19,8 +19,8 @@ public class Stack<T> {
         return item;
     }
 
-    public void push(T temp){
-        StackNode<T> t = new StackNode<T>(temp);
+    public void push(T item){
+        StackNode<T> t = new StackNode<T>(item);
         t.next = top;
         top = t;
         size++;

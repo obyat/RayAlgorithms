@@ -134,6 +134,7 @@ public class SortStack<T>{
     
     Learned: Different solution, ideas:
         1. String comparison doesnt always work because it happens on character basis such as: "1" vs "29" 1 v 2 then 0 vs 9
+        2. "Overloading" within same method using instance of
     
     Mistakes:
         1. keep making same mistakes such as forgetting to print/uncomment
