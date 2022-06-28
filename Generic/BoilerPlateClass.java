@@ -1,4 +1,4 @@
-package Chapter3;
+package Generic;
 import Generic.TESTSUIT;
 
 // import Chapter2.LinkedLists.DllNode;

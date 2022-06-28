@@ -38,7 +38,7 @@ public class AnimalShelter{
     public int getOrder(){ return order;}
     public boolean isOlderThan(AnimalShelter animal){ return this.order < animal.order; }
 
-    //Runtime: 
+    //Runtime: O(n) removal O(1) insertion
     public AnimalShelter dequeueAny(){
        if(dogs.isEmpty()){
             return dequeueCat();
