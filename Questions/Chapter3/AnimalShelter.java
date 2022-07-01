@@ -35,7 +35,7 @@ public class AnimalShelter{
     protected String name;
     public AnimalShelter(String n) {name = n;}
     public void setOrder(int o){ order = o;}
-    public int getOrder(){ return order;}
+    public int getOrder(){ return order; }
     public boolean isOlderThan(AnimalShelter animal){ return this.order < animal.order; }
 
     //Runtime: O(n) removal O(1) insertion
@@ -92,6 +92,8 @@ public class AnimalShelter{
     }
 }
     /*
+
+
     Questions:
         1. Are we able to use any other data structure besides linkedlist?
 
@@ -108,5 +110,6 @@ public class AnimalShelter{
         1. Need oop refresher
     
     Mistakes:
-        1. 
+        1.
+
     */
