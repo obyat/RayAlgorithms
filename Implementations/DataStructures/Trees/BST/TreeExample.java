@@ -16,6 +16,7 @@ public class TreeExample {
         bst.delete(0);
         System.out.println("Traversing tree...");
         bst.traverse();
+        System.out.println("Searching 10 in tree...");
         System.out.println(bst.search(bst.root, 10).getData());
 
     }

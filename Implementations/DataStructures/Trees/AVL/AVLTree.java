@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class AVLTree<T extends Comparable <T>> 
     implements Tree<T>{
 
-        private Node<T> root;
+        public Node<T> root;
 
         @Override
         public Tree<T> insert(T data) {
@@ -158,20 +158,26 @@ public class AVLTree<T extends Comparable <T>>
         private int height(Node<T> node) {
             return node != null ? node.getHeight() : 0;
         }
-    @Override
-    public Node<T> search(Node<T> node, T data) {
-        if(node == null) throw new EmptyStackException();
-        T val = node.getData();
-        System.out.println(val +", is current node being checked");
-        if(val.compareTo(data) == 0){
-            System.out.println("reached here");
-            return node;
-        } else if(val.compareTo(data) < 0){
-            search(node.getRightChild(), data);
-        } else {
-            search(node.getLeftChild(), data);
+
+        public void insertAll(T[] array){
+            Iterator<T> it = Arrays.asList(array).iterator();
+                    while(it.hasNext()){
+                        insert(it.next());
+            }
         }
-        return node;
-    }
+
+        @Override
+        public Node<T> search(Node<T> node, T data) {
+            if(node == null || node.getData().compareTo(data) == 0){
+                System.out.println("Found node: " + node.getData());
+                return node;
+            } else if(node.getData().compareTo(data) < 0){
+                System.out.println(" < Searching node: " + node.getData());
+                return search(node.getRightChild(), data);
+            }
     
+            System.out.println("Searching node: " + node.getData());
+            return search(node.getLeftChild(), data);
+        }
+        
 }
