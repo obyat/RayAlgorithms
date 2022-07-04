@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class AVLTree<T extends Comparable <T>> 
     implements Tree<T>{
 
-        public Node<T> root;
+        private Node<T> root;
 
         @Override
         public Tree<T> insert(T data) {
@@ -165,7 +165,7 @@ public class AVLTree<T extends Comparable <T>>
                         insert(it.next());
             }
         }
-
+        
         @Override
         public Node<T> search(Node<T> node, T data) {
             if(node == null) throw new EmptyStackException();
@@ -180,6 +180,5 @@ public class AVLTree<T extends Comparable <T>>
                 search(node.getLeftChild(), data);
             }
             return node;
-        }
-    
+    }
 }
