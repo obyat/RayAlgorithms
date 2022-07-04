@@ -1,24 +1,25 @@
-package DataStructures.BST;
+package DataStructures.Trees.BST;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.Iterator;
 
+import javax.naming.NameNotFoundException;
+
 public class BinarySearchTree<T extends Comparable <T>> 
     implements Tree<T>{
 
-    private Node<T> root;
+    public Node<T> root;
 
     @Override
     public Tree<T> insert(T data) {
-        if(isEmpty()) root = new Node<T>(data);
-       else {
         insert(data, root);
-       }
-       return this;
+        return this;
     }
 
     public Node<T> insert(T data, Node<T> node) {
+        if(node == null ) return new Node<T>(data);
+        
         if(data.compareTo(node.getData()) < 0){
             if(node.getLeftChild() == null){
                 Node<T> n = new Node<>(data);
@@ -116,6 +117,22 @@ public class BinarySearchTree<T extends Comparable <T>>
     @Override
     public boolean isEmpty() {
         return root == null;
+    }
+
+    @Override
+    public Node<T> search(Node<T> node, T data) {
+        if(node == null) throw new EmptyStackException();
+        T val = node.getData();
+        System.out.println(val +", is current node being checked");
+        if(val.compareTo(data) == 0){
+            System.out.println("reached here");
+            return node;
+        } else if(val.compareTo(data) < 0){
+            search(node.getRightChild(), data);
+        } else {
+            search(node.getLeftChild(), data);
+        }
+        return node;
     }
     
 }

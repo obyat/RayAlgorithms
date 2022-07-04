@@ -1,4 +1,4 @@
-package DataStructures.BST;
+package DataStructures.Trees.BST;
 
 public class Node<T extends Comparable<T>> {
     private T data;

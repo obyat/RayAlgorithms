@@ -1,4 +1,4 @@
-package DataStructures.BST;
+package DataStructures.Trees.AVL;
 
 public interface Tree<T extends Comparable <T>> {
 
@@ -7,5 +7,6 @@ public interface Tree<T extends Comparable <T>> {
     void traverse();
     T getMax();
     T getMin();
+    Node<T> search(Node<T> node, T data);
     boolean isEmpty();
 }

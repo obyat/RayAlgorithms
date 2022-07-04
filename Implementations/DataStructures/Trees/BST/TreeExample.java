@@ -1,6 +1,6 @@
-package DataStructures.BST;
+package DataStructures.Trees.BST;
 
-public class BstExample {
+public class TreeExample {
     
     public static void main(String[] args) {
         BinarySearchTree<Integer> bst = new BinarySearchTree<Integer>();
@@ -16,6 +16,7 @@ public class BstExample {
         bst.delete(0);
         System.out.println("Traversing tree...");
         bst.traverse();
+        System.out.println(bst.search(bst.root, 10).getData());
 
     }
 }
