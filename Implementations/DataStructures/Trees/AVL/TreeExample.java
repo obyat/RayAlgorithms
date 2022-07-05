@@ -19,6 +19,5 @@ public class TreeExample {
         System.out.println("Searching 6 in tree...");
         System.out.println(avl.search(avl.root, 6).getData());
         System.out.println(avl.search(avl.root, 6).getHeight());
-
     }
 }
