@@ -70,5 +70,6 @@ public class ArrayList<T> {
         // al.add(null); //increase
 
         for(int i = 0; i < al.currentCapacity(); i++) System.out.println(al.get(i));
+        int a = 10;
     }
 }

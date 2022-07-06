@@ -180,6 +180,12 @@ public class RedBlackTree<T extends Comparable <T>>
             System.out.println("Searching node: " + node.getData());
             return search(node.getLeftChild(), data);
         }
+
+        @Override
+        public void delete(T data) {
+            // TODO Auto-generated method stub
+            
+        }
         
     
     }
