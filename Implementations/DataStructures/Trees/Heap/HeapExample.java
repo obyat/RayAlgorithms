@@ -18,8 +18,6 @@ public class HeapExample {
         System.out.println("root/min element: " + minHeap.getRoot());
         System.out.println("Sorting MinHeap... ");
         minHeap.sort();
-        
-        
 
     }
 }
