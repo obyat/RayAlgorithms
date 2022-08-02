@@ -20,6 +20,10 @@ public class Node {
         next = _next;
     }
 
+    public boolean isEmpty() {
+        return this == null;
+    }
+
     public static void main(String[] args) {
 
     }
