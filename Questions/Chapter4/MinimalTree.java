@@ -19,26 +19,23 @@ public class MinimalTree {
 
     // Runtime:
     public static Node minimalTree(int[] arr) {
-        if (arr.length <= 0)
+        if (arr.length == 0)
             return null;
-        Node root = new Node(arr[0]);
-        root.left = new Node(10);
-        root.right = new Node(arr[2]);
-        return root;
-        // return constructMinimalTree(arr, root, 1);
+        return constructMinimalTree(arr);
     }
 
-    private static Node constructMinimalTree(int[] arr, Node root, int index) {
-        if (index >= arr.length - 1 || root == null)
+    public static Node constructMinimalTree(int[] arr) {
+        int len = arr.length;
+        if (len == 0)
             return null;
+        int mid = len / 2;
 
-        if (arr[index] < root.val) {
-            root.left = new Node(arr[index]);
-            return constructMinimalTree(arr, root.left, index + 1);
+        Node root = new Node(arr[mid]);
+        if (len > 1) {
+            root.left = constructMinimalTree(Arrays.copyOfRange(arr, 0, mid));
+            root.right = constructMinimalTree(Arrays.copyOfRange(arr, ++mid, len));
         }
-
-        root.right = new Node(arr[index]);
-        return constructMinimalTree(arr, root.right, index + 1);
+        return root;
     }
 
     public static void main(String[] args) {
@@ -46,35 +43,54 @@ public class MinimalTree {
         Node t0a = null;
 
         int[] t1 = { 1, 2, 3 };
-        Node t1a = new Node(1);
-        t1a.left = new Node(2);
+        Node t1a = new Node(2);
+        t1a.left = new Node(1);
         t1a.right = new Node(3);
 
-        int[] t2 = { 1, 2, 3, 4, 5 };
+        int[] t10 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        Node t10a = new Node(5);
+        t10a.left = new Node(2);
+        t10a.right = new Node(8);
 
+        t10a.left.left = new Node(1);
+        t10a.left.right = new Node(4);
+
+        t10a.left.left.left = new Node(0);
+        t10a.left.right.left = new Node(3);
+
+        t10a.right = new Node(8);
+        t10a.right.left = new Node(7);
+        t10a.right.right = new Node(10);
+
+        t10a.right.left.left = new Node(6);
+        t10a.right.right.left = new Node(9);
+
+        int[] t2 = { 1, 2, 3, 4, 5 };
+        System.out.println("Check: " + TESTSUIT.compareNodes(t1a, t1a));
         TESTSUIT.assertTest(minimalTree(t0), Arrays.toString(t0), t0a);
         TESTSUIT.assertTest(minimalTree(t1), Arrays.toString(t1), t1a);
-        // TESTSUIT.assertArray2DTest(matrix1Rotated, "matrix10", matrix1Rotated);
-        // System.out.println();
-
+        TESTSUIT.assertTest(minimalTree(t10), Arrays.toString(t10), t10a);
     }
 }
+
 /*
  * Questions:
- * 1.
+ * 1. is this a balanced tree with height difference of <= 1?
  * 
  * Ideas:
- * 1.
+ * 1. use midpoint as root and cut array into left and right segments and repeat
  * 
  * Edge Cases:
- * 1.
+ * 1. even/odd arrays => using midpoint formula = start + (end – start)/2 = 0 +
+ * (len - 0) / 2 = end/2
  * 
  * Pros vs. Cons in solutons:
  * 1.
  * 
  * Learned: Different solution, ideas:
- * 1.
+ * 1. Must review how tree behaves in stack frames!
  * 
  * Mistakes:
- * 1.
+ * 1. Stackframes!
+ * 
  */

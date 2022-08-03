@@ -17,7 +17,7 @@ public class TESTSUIT {
 
             // stack
             if (input instanceof Stack) {
-                if (((Stack) input).isEmpty() && ((Stack) input).isEmpty()) {
+                if (((Stack) input).isEmpty() && ((Stack) expected).isEmpty()) {
                     System.out.println("[Passed] " + args);
                     return;
                 } else if (((Stack) input).isEmpty()) {
@@ -45,11 +45,11 @@ public class TESTSUIT {
                 } else if (((Node) input).isEmpty()) {
                     System.out.println("[Failed] received: Empty Node, for: " + args);
                     return;
-                } else if (!((Node) input).isEmpty() && !compareNodes((Node) input, (Node) expected)) {
+                } else if (!(((Node) input).isEmpty()) && !(compareNodes((Node) input, (Node) expected))) {
                     System.out.println(
-                            "[Failed] expected: " + nodeToList((Node) input, new ArrayList()) +
-                                    ", received: " + args + ", for: "
-                                    + nodeToList((Node) expected, new ArrayList()));
+                            "[Failed] expected: " + nodeToList((Node) expected, new ArrayList()) +
+                                    ", received: " + nodeToList((Node) input, new ArrayList()) + ", for: "
+                                    + args);
                     return;
                 }
 
@@ -81,7 +81,7 @@ public class TESTSUIT {
         return list.toString();
     }
 
-    private static boolean compareNodes(Node input, Node expected) {
+    public static boolean compareNodes(Node input, Node expected) {
         if (input == null && expected == null) {
             return true;
         } else if ((input == null && expected != null) || (input != null && expected == null)) {
