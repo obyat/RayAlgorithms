@@ -89,6 +89,8 @@ public class MinimalTree {
  * 
  * Learned: Different solution, ideas:
  * 1. Must review how tree behaves in stack frames!
+ * 2. Array.length is an O(1) operation. Saving it to a variable len could result in O(n) * length space 
+ *   depending on the number of stack frames. Because each frame can save its own len variable
  * 
  * Mistakes:
  * 1. Stackframes!

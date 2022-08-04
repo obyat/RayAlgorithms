@@ -48,7 +48,7 @@ public class TESTSUIT {
                 } else if (!(((Node) input).isEmpty()) && !(compareNodes((Node) input, (Node) expected))) {
                     System.out.println(
                             "[Failed] expected: " + nodeToList((Node) expected, new ArrayList()) +
-                                    ", received: " + nodeToList((Node) input, new ArrayList()) + ", for: "
+                                    ", received: " + nodeToList((Node) expected, new ArrayList()) + ", for: "
                                     + args);
                     return;
                 }
