@@ -20,7 +20,10 @@ public class Node {
         next = _next;
     }
 
+
+
     public boolean isEmpty() {
+        print
         return this == null;
     }
 

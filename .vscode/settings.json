@@ -4,5 +4,10 @@
         "Questions",
         "Implementations",
         ""
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0B3606",
+        "titleBar.activeBackground": "#104B09",
+        "titleBar.activeForeground": "#F2FDF1"
+    }
 }
