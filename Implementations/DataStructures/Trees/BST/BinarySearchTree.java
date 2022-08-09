@@ -28,7 +28,6 @@ public class BinarySearchTree<T extends Comparable<T>>
                 Node<T> n = new Node<>(data);
                 node.setLeftChild(n);
                 n.setParent(node);
-                System.out.println("The parent of " + n.getData() + " is " + n.getParent().getData());
             }
             insert(data, node.getLeftChild());
 
@@ -37,7 +36,6 @@ public class BinarySearchTree<T extends Comparable<T>>
                 Node<T> n = new Node<T>(data);
                 node.setRightChild(n);
                 n.setParent(node);
-                System.out.println("The parent of " + n.getData() + " is " + n.getParent().getData());
             }
             insert(data, node.getRightChild());
         }
