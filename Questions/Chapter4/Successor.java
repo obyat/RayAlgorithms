@@ -89,8 +89,9 @@ public class Successor<T extends Comparable<T>> {
  * 1.
  * 
  * Learned: Different solution, ideas:
- * 1.
+ * 1. More time is needed for planning solution rather than coding
  * 
  * Mistakes:
- * 1.
+ * 1. Attempted first solution that popped into mind
+ * 
  */
