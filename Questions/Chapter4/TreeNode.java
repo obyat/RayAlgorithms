@@ -1,23 +1,21 @@
 package Chapter4;
 
-public class Node {
+public class TreeNode {
     public int val;
     public Node left;
     public Node right;
-    public Node next;
 
-    public Node() {
+    public TreeNode() {
     }
 
-    public Node(int _val) {
+    public TreeNode(int _val) {
         val = _val;
     }
 
-    public Node(int _val, Node _left, Node _right, Node _next) {
+    public TreeNode(int _val, Node _left, Node _right) {
         val = _val;
         left = _left;
         right = _right;
-        next = _next;
     }
 
     public boolean isEmpty() {
