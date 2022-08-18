@@ -1,4 +1,4 @@
-package DataStructures.TeesGraphs;
+package DataStructures.TreesGraphs;
 
 import javax.swing.tree.TreeNode;
 

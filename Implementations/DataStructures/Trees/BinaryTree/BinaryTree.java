@@ -3,9 +3,11 @@ package DataStructures.Trees.BinaryTree;
 import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.Iterator;
+
 import javax.naming.NameNotFoundException;
 
-public class BinaryTree<T> implements Tree<T> {
+public class BinaryTree<T extends Comparable<T>>
+        implements Tree<T> {
 
     public Node<T> root;
 
@@ -14,25 +16,28 @@ public class BinaryTree<T> implements Tree<T> {
         if (isEmpty())
             root = new Node<T>(data);
         else {
-            insert(data, root, true);
+            insert(data, root);
         }
         return this;
     }
 
-    // no specific sorting will try to balance tree
-    public Node<T> insert(T data, Node<T> node, boolean goLeft) {
-        if (node.getLeftChild() == null) {
-            Node<T> n = new Node<>(data);
-            node.setLeftChild(n);
-            n.setParent(node);
-        } else if (node.getRightChild() == null) {
-            Node<T> n = new Node<T>(data);
-            node.setRightChild(n);
-            n.setParent(node);
-        } else if (goLeft) {
-            insert(data, node.getLeftChild(), false);
-        } else {
-            insert(data, node.getRightChild(), false);
+    // no duplicates
+    public Node<T> insert(T data, Node<T> node) {
+        if (data.compareTo(node.getData()) < 0) {
+            if (node.getLeftChild() == null) {
+                Node<T> n = new Node<>(data);
+                node.setLeftChild(n);
+                n.setParent(node);
+            }
+            insert(data, node.getLeftChild());
+
+        } else if (data.compareTo(node.getData()) > 0) {
+            if (node.getRightChild() == null) {
+                Node<T> n = new Node<T>(data);
+                node.setRightChild(n);
+                n.setParent(node);
+            }
+            insert(data, node.getRightChild());
         }
 
         return node;
@@ -40,9 +45,38 @@ public class BinaryTree<T> implements Tree<T> {
 
     public void insertAll(T[] array) {
         Iterator<T> it = Arrays.asList(array).iterator();
-        while (it.hasNext()) {
+        while (it.hasNext())
             insert(it.next());
+    }
+
+    @Override
+    public void delete(T data) {
+        root = delete(data, root);
+    }
+
+    public Node<T> delete(T data, Node<T> node) {
+        if (node == null) {
+            return null;
         }
+
+        if (data.compareTo(node.getData()) < 0) {
+            node.setLeftChild(delete(data, node.getLeftChild()));
+        } else if (data.compareTo(node.getData()) > 0) {
+            node.setRightChild(delete(data, node.getRightChild()));
+        } else {
+            // one child -- leaf node/one child case
+            if (node.getLeftChild() == null) {
+                return node.getRightChild();
+            } else if (node.getLeftChild() == null) {
+                return node.getRightChild();
+            }
+
+            // two children
+            node.setData(getMax(node.getLeftChild()));
+            node.setLeftChild(delete(node.getData(), node.getLeftChild()));
+
+        }
+        return node;
     }
 
     @Override
@@ -94,24 +128,17 @@ public class BinaryTree<T> implements Tree<T> {
 
     @Override
     public Node<T> search(Node<T> node, T data) {
-        return search(node, data, null);
-    }
-
-    public Node<T> search(Node<T> node, T data, Node<T> foundNode) {
-        if (node == null)
-            return foundNode;
-
-        else if (node.getData().equals(data)) {
-            foundNode = node;
-            return foundNode;
+        if (node == null) {
+            System.out.println("Cannot find node:" + data);
+            return node;
+        } else if (node.getData().equals(data)) {
+            return node;
+        } else if (node.getData().compareTo(data) > 0) {
+            return search(node.getLeftChild(), data);
+        } else if (node.getData().compareTo(data) < 0) {
+            return search(node.getRightChild(), data);
         }
-
-        if (node.getLeftChild() != null)
-            foundNode = search(node.getLeftChild(), data, foundNode);
-        if (node.getRightChild() != null)
-            foundNode = search(node.getRightChild(), data, foundNode);
-
-        return foundNode;
+        return node;
     }
 
 }

@@ -1,0 +1,462 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch BitOperations",
+            "request": "launch",
+            "mainClass": "BitOperations",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DeleteMiddleNode",
+            "request": "launch",
+            "mainClass": "Chapter2.DeleteMiddleNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Intersection",
+            "request": "launch",
+            "mainClass": "Chapter2.Intersection",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch LLPalindrome",
+            "request": "launch",
+            "mainClass": "Chapter2.LLPalindrome",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch LLRemoveDups",
+            "request": "launch",
+            "mainClass": "Chapter2.LLRemoveDups",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DllNode",
+            "request": "launch",
+            "mainClass": "Chapter2.LinkedLists.DllNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DoublyLinkedList",
+            "request": "launch",
+            "mainClass": "Chapter2.LinkedLists.DoublyLinkedList",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListNode",
+            "request": "launch",
+            "mainClass": "Chapter2.LinkedLists.ListNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Node",
+            "request": "launch",
+            "mainClass": "Chapter2.LinkedLists.Node",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch LoopDetection",
+            "request": "launch",
+            "mainClass": "Chapter2.LoopDetection",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Partition",
+            "request": "launch",
+            "mainClass": "Chapter2.Partition",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReturnKthToLast",
+            "request": "launch",
+            "mainClass": "Chapter2.ReturnKthToLast",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch SumLists",
+            "request": "launch",
+            "mainClass": "Chapter2.SumLists",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnimalShelter",
+            "request": "launch",
+            "mainClass": "Chapter3.AnimalShelter",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch MyQueue",
+            "request": "launch",
+            "mainClass": "Chapter3.MyQueue",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortStack",
+            "request": "launch",
+            "mainClass": "Chapter3.SortStack",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackMin",
+            "request": "launch",
+            "mainClass": "Chapter3.StackMin",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackOfPlates",
+            "request": "launch",
+            "mainClass": "Chapter3.StackOfPlates",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ThreeInOne",
+            "request": "launch",
+            "mainClass": "Chapter3.ThreeInOne",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch FirstCommonAncestor",
+            "request": "launch",
+            "mainClass": "Chapter4.FirstCommonAncestor",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch GetRandomNode",
+            "request": "launch",
+            "mainClass": "Chapter4.GetRandomNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch LevelOrder",
+            "request": "launch",
+            "mainClass": "Chapter4.LevelOrder",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListOfDepths",
+            "request": "launch",
+            "mainClass": "Chapter4.ListOfDepths",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch MinimalTree",
+            "request": "launch",
+            "mainClass": "Chapter4.MinimalTree",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Node(1)",
+            "request": "launch",
+            "mainClass": "Chapter4.Node",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch NodeTest",
+            "request": "launch",
+            "mainClass": "Chapter4.NodeTest",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Chapter4.Solution",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Successor",
+            "request": "launch",
+            "mainClass": "Chapter4.Successor",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeNode",
+            "request": "launch",
+            "mainClass": "Chapter4.TreeNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreePointer2",
+            "request": "launch",
+            "mainClass": "Chapter4.TreePointer2",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckPermutation",
+            "request": "launch",
+            "mainClass": "CheckPermutation",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayList",
+            "request": "launch",
+            "mainClass": "DataStructures.ArrayList",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch HashFunction",
+            "request": "launch",
+            "mainClass": "DataStructures.HashTableImp.HashFunction",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch WorldList",
+            "request": "launch",
+            "mainClass": "DataStructures.HashTableImp.WorldList",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DllNode(1)",
+            "request": "launch",
+            "mainClass": "DataStructures.LinkedLists.DllNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DoublyLinkedList(1)",
+            "request": "launch",
+            "mainClass": "DataStructures.LinkedLists.DoublyLinkedList",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListNode(1)",
+            "request": "launch",
+            "mainClass": "DataStructures.LinkedLists.ListNode",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Node(2)",
+            "request": "launch",
+            "mainClass": "DataStructures.LinkedLists.Node",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Queue",
+            "request": "launch",
+            "mainClass": "DataStructures.Queue",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Stack",
+            "request": "launch",
+            "mainClass": "DataStructures.Stack",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeExample",
+            "request": "launch",
+            "mainClass": "DataStructures.Trees.AVL.TreeExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeExample(1)",
+            "request": "launch",
+            "mainClass": "DataStructures.Trees.BST.TreeExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeExample(2)",
+            "request": "launch",
+            "mainClass": "DataStructures.Trees.BinaryTree.TreeExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch HeapExample",
+            "request": "launch",
+            "mainClass": "DataStructures.Trees.Heap.HeapExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeExample(3)",
+            "request": "launch",
+            "mainClass": "DataStructures.Trees.RedBlackTree.TreeExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryTree",
+            "request": "launch",
+            "mainClass": "DataStructures.TreesGraphs.BinaryTree",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BoilerPlateClass",
+            "request": "launch",
+            "mainClass": "Generic.BoilerPlateClass",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DeleteClassFiles",
+            "request": "launch",
+            "mainClass": "Generic.DeleteClassFiles",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch C6E12",
+            "request": "launch",
+            "mainClass": "IntoExercises.C6E12",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch C6Q10",
+            "request": "launch",
+            "mainClass": "IntoExercises.C6Q10",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch IQ1",
+            "request": "launch",
+            "mainClass": "IntoExercises.IQ1",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Permutation",
+            "request": "launch",
+            "mainClass": "IntoExercises.Permutation",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch IsUnique",
+            "request": "launch",
+            "mainClass": "IsUnique",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch OneAway",
+            "request": "launch",
+            "mainClass": "OneAway",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch PalindromePermuation",
+            "request": "launch",
+            "mainClass": "PalindromePermuation",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch PalindromePermuationImproved",
+            "request": "launch",
+            "mainClass": "PalindromePermuationImproved",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch PalindromePermuationSlightlyImproved",
+            "request": "launch",
+            "mainClass": "PalindromePermuationSlightlyImproved",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch PalindromePermuationSmallerCodeImproved",
+            "request": "launch",
+            "mainClass": "PalindromePermuationSmallerCodeImproved",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch RotateMatrix",
+            "request": "launch",
+            "mainClass": "RotateMatrix",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch RotateString",
+            "request": "launch",
+            "mainClass": "RotateString",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BubbleSort",
+            "request": "launch",
+            "mainClass": "Sorting.BubbleSort",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringCompression",
+            "request": "launch",
+            "mainClass": "StringCompression",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch URLify",
+            "request": "launch",
+            "mainClass": "URLify",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch ZeroMatrix",
+            "request": "launch",
+            "mainClass": "ZeroMatrix",
+            "projectName": "RayAlgorithms_7676a1be"
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 package DataStructures.Trees.BinaryTree;
 
-public class Node<T> {
+public class Node<T extends Comparable<T>> {
     private T data;
-    private Node<T> leftChild;
-    private Node<T> rightChild;
-    private Node<T> parent;
+    public Node<T> leftChild;
+    public Node<T> rightChild;
+    public Node<T> parent;
 
     public Node(T data) {
         this.data = data;
