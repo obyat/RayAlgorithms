@@ -6,9 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /*
-* @lc app=leetcode id=77 lang=java
-*
-* [77] Combinations
+* leetcode 77 Combinations
+* 
 */
 
 // @lc code=start
