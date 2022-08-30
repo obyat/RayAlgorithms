@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Graph",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.Graph",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BreadthFirstSearch",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.BreadthFirstSearch",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch DepthFirstSearch",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.DepthFirstSearch",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch BSTSequence",
             "request": "launch",
             "mainClass": "Chapter4.BSTSequence",
