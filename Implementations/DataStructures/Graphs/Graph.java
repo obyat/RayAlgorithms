@@ -29,6 +29,14 @@ public class Graph<T> {
         }
     }
 
+    public Node<T> find(Node<T> node) {
+        return node;
+    }
+
+    public Boolean isConnectedNodes(Node<T> node1, Node<T> node2) {
+        return find(node1) == find(node2);
+    } 
+
     public void SearchDFSIteratively(Node<T> startVertex) {
         Deque<Node<T>> stack = new LinkedList<>();
         stack.push(startVertex);

@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DisjointGraphSet",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.DisjointGraphSet",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickFindByPathCompression",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.QuickFindByPathCompression",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickUnionByRank",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.QuickUnionByRank",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickUnion",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.QuickUnion",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Unionfind",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.Unionfind",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch Graph",
             "request": "launch",
             "mainClass": "DataStructures.Graphs.Graph",
