@@ -1,9 +1,7 @@
-package Chapter4;
+package Chapter4.Trees;
 
-import Chapter2.LinkedLists.DoublyLinkedList;
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.Queue;
 
 import Generic.TESTSUIT;
 

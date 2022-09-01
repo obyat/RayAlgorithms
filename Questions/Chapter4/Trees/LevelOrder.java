@@ -1,4 +1,4 @@
-package Chapter4;
+package Chapter4.Trees;
 
 /* An Iterative Java program to print levels line by line */
 

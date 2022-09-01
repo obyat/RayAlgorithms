@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MinimalTree",
+            "request": "launch",
+            "mainClass": "Chapter4.Trees.MinimalTree",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch DisjointGraphSet",
             "request": "launch",
             "mainClass": "DataStructures.Graphs.DisjointGraphSet",

@@ -1,4 +1,4 @@
-package Chapter4;
+package Chapter4.Trees;
 
 /*
  * leetcode 572. Subtree of Another Tree

@@ -1,4 +1,4 @@
-package Chapter4;
+package Chapter4.Trees;
 
 import DataStructures.Trees.BinaryTree.BinaryTree;
 import DataStructures.Trees.BinaryTree.Node;
