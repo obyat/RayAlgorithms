@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch GraphValidTreeSol",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.GraphValidTreeSol",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch GraphValidTree",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.GraphValidTree",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch MinimalTree",
             "request": "launch",
             "mainClass": "Chapter4.Trees.MinimalTree",
