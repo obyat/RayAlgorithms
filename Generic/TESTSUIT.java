@@ -1,7 +1,7 @@
 package Generic;
 
 import Chapter2.LinkedLists.DoublyLinkedList;
-import Chapter4.Node;
+import Chapter4.Trees.Node;
 
 import java.util.ArrayList;
 

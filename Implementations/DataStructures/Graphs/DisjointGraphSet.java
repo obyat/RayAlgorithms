@@ -16,14 +16,14 @@ public class DisjointGraphSet {
     }
 
     // returns the element of the root of the graph
-    // O(1) time amortized time after O(1) worst case time
+    // O(1) time amortized time after O(N) worst case time
     public int find(int x) {
         if (root[x] == x)
             return x;
         return root[x] = find(root[x]);
     }
 
-    // O(1) time amortized time after O(1) worst case time
+    // O(1) time amortized time after O(N) worst case time
     public void union(int x, int y) {
         int rootNodeX = find(x);
         int rootNodeY = find(y);

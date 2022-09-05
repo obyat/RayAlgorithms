@@ -13,11 +13,13 @@ class GraphValidTree {
         HashSet<Node> visitedNodes = new HashSet<Node>();
         Node firstNode = new Node(edges[0][0]);
         Node secondNode = new Node(edges[0][1]);
-        for (int i = 0; i < edges.length; i++) {
-            firstNode = new Node(edges[i][0]);
-            secondNode = new Node(edges[i][1]);
-            firstNode.setNeighbor(secondNode);
-            secondNode.setNeighbor(firstNode);
+        firstNode.setNeighbor(secondNode);
+        secondNode.setNeighbor(firstNode);
+
+        for (int i = 1; i < edges.length; i++) {/*  */
+            // need get node(0) from hashSet
+            new Node(edges[i][0]).setNeighbor(new Node(edges[i][1]));
+            new Node(edges[i][1]).setNeighbor(new Node(edges[i][0]));
         }
 
         // boolean noCyles = traverseDFS(roota, visitedNodes, roota);
