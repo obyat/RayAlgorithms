@@ -2,6 +2,7 @@ package Generic;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
 import java.util.stream.*;
 
 public class CodeShellPrac {
@@ -12,8 +13,25 @@ public class CodeShellPrac {
 
         Arrays.sort(logs, Comparator.comparingInt(a -> a[1]));
 
-        for (int[] log : logs)
-            print(log[1]);
+        String first = "abc";
+
+        // for (int[] log : logs)
+        // print(log[1]);
+
+        for (Character ch : first.toCharArray())
+            print(distance(ch));
+
+    }
+
+    static int distance(Character[] ch1, Character[] ch2) {
+
+        int score = 0;
+        for(int i = 0; i < ch1.length; i++) {
+            score += 
+                return i;
+        }
+        }
+        return ;
     }
 
     public static void print(Object o) {

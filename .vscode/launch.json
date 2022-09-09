@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Dijkstra",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.Dijkstra.Dijkstra",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch EvaluateDivision",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.EvaluateDivision",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch WaterDistribution",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.WaterDistribution",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch SmallestStringWithSwaps",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.SmallestStringWithSwaps",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch FullNetworkTime",
             "request": "launch",
             "mainClass": "Chapter4.Graphs.FullNetworkTime",

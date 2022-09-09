@@ -6,7 +6,7 @@ public class ArrayList<T> {
     public int capacity;
     Object arrayList[];
 
-    ArrayList(){
+    public ArrayList(){
         this.size = 1;
         this.capacity = 0;
         this.arrayList = new Object[size];
