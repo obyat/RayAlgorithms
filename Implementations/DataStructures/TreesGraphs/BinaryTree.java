@@ -80,7 +80,7 @@ public class BinaryTree<T> {
 
     }
 
-    public static void main(String[] args) {>>>>>
+    public static void main(String[] args) {
         BinaryTree<Integer> bt = new BinaryTree<Integer>();
         bt.createBinaryTree();
         bt.PreOrderTraversal(bt.root);

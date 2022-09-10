@@ -17,22 +17,8 @@ public class CodeShellPrac {
 
         // for (int[] log : logs)
         // print(log[1]);
-
-        for (Character ch : first.toCharArray())
-            print(distance(ch));
-
     }
 
-    static int distance(Character[] ch1, Character[] ch2) {
-
-        int score = 0;
-        for(int i = 0; i < ch1.length; i++) {
-            score += 
-                return i;
-        }
-        }
-        return ;
-    }
 
     public static void print(Object o) {
         System.out.println(o);

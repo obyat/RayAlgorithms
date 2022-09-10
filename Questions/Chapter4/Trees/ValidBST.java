@@ -1,4 +1,4 @@
-package Chapter4;
+package Chapter4.Trees;
 /*
 *leetcode 98. Validate Binary Search Tree
 *https://leetcode.com/problems/validate-binary-search-tree/

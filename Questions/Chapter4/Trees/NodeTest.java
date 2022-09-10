@@ -1,4 +1,4 @@
-package Chapter4;
+package Chapter4.Trees;
 //Testing references between two NodeTests
 public class NodeTest {
     public int val;

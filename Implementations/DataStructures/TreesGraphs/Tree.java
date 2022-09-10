@@ -1,5 +1,5 @@
 package DataStructures.TreesGraphs;
 
-public class Tree {
+public class TreeNode {
     public TreeNode root;
 }

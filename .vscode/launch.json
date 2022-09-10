@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BoilerPlateClass",
+            "request": "launch",
+            "mainClass": "Generic.BoilerPlateClass",
+            "projectName": "RayAlgorithms_75c61f6c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Successor",
+            "request": "launch",
+            "mainClass": "Chapter4.Trees.Successor",
+            "projectName": "RayAlgorithms_75c61f6c"
+        },
+        {
+            "type": "java",
+            "name": "Launch CodeShellPrac",
+            "request": "launch",
+            "mainClass": "Generic.CodeShellPrac",
+            "projectName": "RayAlgorithms_75c61f6c"
+        },
+        {
+            "type": "java",
+            "name": "Launch PriorityQueue",
+            "request": "launch",
+            "mainClass": "DataStructures.Trees.Heap.PriorityQueue",
+            "projectName": "RayAlgorithms_75c61f6c"
+        },
+        {
+            "type": "java",
             "name": "Launch Dijkstra",
             "request": "launch",
             "mainClass": "DataStructures.Graphs.Dijkstra.Dijkstra",
