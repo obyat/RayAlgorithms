@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 
-import DataStructures.Graphs.Unionfind;
+import DataStructures.Graphs.DisjointSets.Unionfind;
 
 public class WaterDistribution {
 

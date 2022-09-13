@@ -1,39 +1,37 @@
-package DataStructures.Graphs;
+package DataStructures.Graphs.DisjointSets;
 
-public class Unionfind {
+public class QuickUnion {
     private int[] root;
 
-    public Unionfind(int size) {
+    public QuickUnion(int size) {
         root = new int[size];
-
-        // each elemenet is its own root node initially in the graph
         for (int i = 0; i < size; i++) {
             root[i] = i;
         }
-
     }
 
-    // returns the elemenet of the root of the graph
-    // O(1) time
+    // returns the element of the root of the graph
+    // O(n) time
     public int find(int x) {
-        return root[x];
+        while (root[x] != x) {
+            x = root[x];
+        }
+        return x;
     }
 
     // O(n) time
     public void union(int x, int y) {
-        int rootNodeX = root[x];
-        int rootNodeY = root[y];
+        int rootNodeX = find(x);
+        int rootNodeY = find(y);
 
-        if (rootNodeX != rootNodeY) {
-            for (int i = 0; i < root.length; i++) {
-                if (root[i] == rootNodeY) { // search for all nodes with Y as parent and change them to x
-                    root[i] = rootNodeX;
-                }
-            }
-        }
+        // root[rootNodeY] gets the parent of rootNodeY since they all have the same
+        // parent
+        if (rootNodeX != rootNodeY)
+            root[rootNodeY] = rootNodeX;
+
     }
 
-    // O(1) time
+    // O(n) time
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
@@ -43,7 +41,7 @@ public class Unionfind {
     }
 
     public static void main(String[] args) {
-        Unionfind unionfind = new Unionfind(10);
+        QuickUnion unionfind = new QuickUnion(10);
         unionfind.union(1, 2);
         unionfind.union(2, 5);
         unionfind.union(5, 6);

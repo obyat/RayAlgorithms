@@ -1,7 +1,8 @@
 package Chapter4.Graphs;
 
-import DataStructures.Graphs.Unionfind;
 import java.util.Comparator;
+
+import DataStructures.Graphs.DisjointSets.Unionfind;
 import Generic.TESTSUIT;
 import java.util.Arrays;
 

@@ -1,12 +1,16 @@
-package DataStructures.Graphs;
+package DataStructures.Graphs.DisjointSets;
 
-public class QuickUnion {
+public class QuickUnionByRank {
     private int[] root;
+    private int[] rank;
 
-    public QuickUnion(int size) {
+    public QuickUnionByRank(int size) {
         root = new int[size];
+        rank = new int[size];
+
         for (int i = 0; i < size; i++) {
             root[i] = i;
+            rank[i] = 1;
         }
     }
 
@@ -26,8 +30,18 @@ public class QuickUnion {
 
         // root[rootNodeY] gets the parent of rootNodeY since they all have the same
         // parent
-        if (rootNodeX != rootNodeY)
-            root[rootNodeY] = rootNodeX;
+        if (rootNodeX != rootNodeY) {
+
+            if (rank[rootNodeX] > rank[rootNodeY]) {
+                root[rootNodeY] = rootNodeX;
+            } else if (rank[rootNodeX] < rank[rootNodeY]) {
+                root[rootNodeX] = rootNodeY;
+            } else {
+                root[rootNodeY] = rootNodeX;
+                rank[rootNodeX] += 1;
+            }
+
+        }
 
     }
 
@@ -41,7 +55,7 @@ public class QuickUnion {
     }
 
     public static void main(String[] args) {
-        QuickUnion unionfind = new QuickUnion(10);
+        QuickUnionByRank unionfind = new QuickUnionByRank(10);
         unionfind.union(1, 2);
         unionfind.union(2, 5);
         unionfind.union(5, 6);

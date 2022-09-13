@@ -1,4 +1,5 @@
 package Chapter4.Trees;
+
 //Testing references between two NodeTests
 public class NodeTest {
     public int val;
@@ -6,7 +7,8 @@ public class NodeTest {
     public NodeTest right;
     public NodeTest next;
 
-    public NodeTest() {}
+    public NodeTest() {
+    }
 
     public NodeTest(int _val) {
         val = _val;

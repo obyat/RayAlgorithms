@@ -26,7 +26,7 @@ public class Dijkstra<T> {
                         evaluateDistanceAndPath(entry.getKey(), entry.getValue(), currentNode);
                         // System.out.println("visited " + entry.getKey().getName() + ", distance: "
                         // + entry.getKey().getDistance() + ", value: " + entry.getValue());
-                        unvisitedNodes.add(entry.getKey()); // if candidiates for unvisited adjacentNodes exist add them
+                        unvisitedNodes.add(entry.getKey()); // if candidates for unvisited adjacentNodes exist add them
                                                             // to queue
                     });
             visited.add(currentNode);

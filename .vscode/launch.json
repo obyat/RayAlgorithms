@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FFExample",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.FordFulkerson.FFExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Successor",
+            "request": "launch",
+            "mainClass": "Chapter4.Trees.Successor",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch NodeTest",
+            "request": "launch",
+            "mainClass": "Chapter4.Trees.NodeTest",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch BoilerPlateClass",
             "request": "launch",
             "mainClass": "Generic.BoilerPlateClass",

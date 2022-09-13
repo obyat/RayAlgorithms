@@ -1,51 +1,36 @@
-package DataStructures.Graphs;
+package DataStructures.Graphs.DisjointSets;
 
-public class QuickUnionByRank {
+public class QuickFindByPathCompression {
     private int[] root;
-    private int[] rank;
 
-    public QuickUnionByRank(int size) {
+    public QuickFindByPathCompression(int size) {
         root = new int[size];
-        rank = new int[size];
-
         for (int i = 0; i < size; i++) {
             root[i] = i;
-            rank[i] = 1;
         }
     }
 
     // returns the element of the root of the graph
-    // O(n) time
+    // O(logN) time, worstcase O(N) time
     public int find(int x) {
-        while (root[x] != x) {
-            x = root[x];
-        }
-        return x;
+        if (x == root[x])
+            return x;
+        return root[x] = find(root[x]);
     }
 
-    // O(n) time
+    // O(logN) time, worstcase O(N) time
     public void union(int x, int y) {
         int rootNodeX = find(x);
         int rootNodeY = find(y);
 
         // root[rootNodeY] gets the parent of rootNodeY since they all have the same
         // parent
-        if (rootNodeX != rootNodeY) {
-
-            if (rank[rootNodeX] > rank[rootNodeY]) {
-                root[rootNodeY] = rootNodeX;
-            } else if (rank[rootNodeX] < rank[rootNodeY]) {
-                root[rootNodeX] = rootNodeY;
-            } else {
-                root[rootNodeY] = rootNodeX;
-                rank[rootNodeX] += 1;
-            }
-
-        }
+        if (rootNodeX != rootNodeY)
+            root[rootNodeY] = rootNodeX;
 
     }
 
-    // O(n) time
+    // O(logN) time, worstcase O(N) time
     public boolean connected(int x, int y) {
         return find(x) == find(y);
     }
@@ -55,7 +40,7 @@ public class QuickUnionByRank {
     }
 
     public static void main(String[] args) {
-        QuickUnionByRank unionfind = new QuickUnionByRank(10);
+        QuickFindByPathCompression unionfind = new QuickFindByPathCompression(10);
         unionfind.union(1, 2);
         unionfind.union(2, 5);
         unionfind.union(5, 6);
