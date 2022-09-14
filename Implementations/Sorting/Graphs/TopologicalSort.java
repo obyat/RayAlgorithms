@@ -2,9 +2,6 @@ package Sorting.Graphs;
 
 import java.util.List;
 import java.util.Stack;
-
-import javax.swing.text.html.HTMLDocument.Iterator;
-
 import java.util.ArrayList;
 
 public class TopologicalSort {
