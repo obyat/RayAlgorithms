@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TopologicalSort",
+            "request": "launch",
+            "mainClass": "Sorting.Graphs.TopologicalSort",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch CycleDetectionExample",
             "request": "launch",
             "mainClass": "DataStructures.Graphs.CycleDetection.CycleDetectionExample",

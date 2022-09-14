@@ -3,17 +3,17 @@ package DataStructures.Graphs.CycleDetection;
 import java.util.List;
 
 public class CycleDetection<T> {
-    public boolean hasCycle(Vertex<T> source) {
+    public boolean hasCycle(List<DataStructures.Graphs.Kruskal.Vertex<T>> vertices) {
 
-        source.setVisiting(true);
+        vertices.setVisiting(true);
 
-        for (Vertex<T> neighbor : source.getNeighbors()) {
+        for (Vertex<T> neighbor : vertices.getNeighbors()) {
             if (neighbor.isVisiting() || !neighbor.isVisited() && hasCycle(neighbor))
                 return true;
         }
 
-        source.setVisiting(false);
-        source.setVisited(true);
+        vertices.setVisiting(false);
+        vertices.setVisited(true);
 
         return false;
     }
