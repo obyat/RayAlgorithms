@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CycleDetectionExample",
+            "request": "launch",
+            "mainClass": "DataStructures.Graphs.CycleDetection.CycleDetectionExample",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch FFExample",
             "request": "launch",
             "mainClass": "DataStructures.Graphs.FordFulkerson.FFExample",

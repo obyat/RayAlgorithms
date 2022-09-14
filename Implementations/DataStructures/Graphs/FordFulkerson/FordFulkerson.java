@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class FordFulkerson<T> {
