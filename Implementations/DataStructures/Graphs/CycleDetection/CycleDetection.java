@@ -19,7 +19,7 @@ public class CycleDetection<T> {
     }
 
     public boolean hasCycle(List<Vertex<T>> vertices) {
-        for (Vertex v : vertices) {
+        for (Vertex<T> v : vertices) {
             if (!v.isVisited() && hasCycle(v))
                 return true;
         }
@@ -27,7 +27,7 @@ public class CycleDetection<T> {
     }
 
     public boolean hasCycleUndirected(List<Vertex<T>> vertices) {
-        for (Vertex v : vertices) {
+        for (Vertex<T> v : vertices) {
             if (!v.isVisited() && hasCycle(null, v))
                 return true;
         }
