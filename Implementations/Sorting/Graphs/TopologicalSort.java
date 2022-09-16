@@ -13,9 +13,12 @@ public class TopologicalSort {
     private TopologicalSort(int vertexCount) {
         this.VertexCount = vertexCount;
         adjList = new ArrayList<ArrayList<Integer>>(vertexCount);
+        System.out.println("size: " + adjList.size());
         for (int i = 0; i < vertexCount; i++) {
             adjList.add(new ArrayList<Integer>());
         }
+        System.out.println("size: " + adjList.size());
+
     }
 
     public void addEdge(int vertex, int neighbor) {
@@ -51,14 +54,16 @@ public class TopologicalSort {
     }
 
     public static void main(String[] args) {
-        TopologicalSort topSort = new TopologicalSort(7);
-        topSort.addEdge(5, 2);
-        topSort.addEdge(5, 6);
-        topSort.addEdge(5, 0);
-        topSort.addEdge(4, 0);
-        topSort.addEdge(4, 1);
-        topSort.addEdge(2, 3);
-        topSort.addEdge(3, 1);
+        TopologicalSort topSort = new TopologicalSort(2);
+        // topSort.addEdge(5, 2);
+        // topSort.addEdge(5, 6);
+        // topSort.addEdge(5, 0);
+        // topSort.addEdge(4, 0);
+        // topSort.addEdge(4, 1);
+        // topSort.addEdge(2, 3);
+        // topSort.addEdge(3, 1);
+
+        topSort.addEdge(1, 0);
 
         System.out.println("TopologicalSort: ");
         System.out.println(topSort.sort().toString()); // 5, 4, 2, 3, 1, 0

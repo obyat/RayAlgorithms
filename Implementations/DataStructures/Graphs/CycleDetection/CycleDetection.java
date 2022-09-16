@@ -3,7 +3,7 @@ package DataStructures.Graphs.CycleDetection;
 import java.util.List;
 
 public class CycleDetection<T> {
-    public boolean hasCycle(List<DataStructures.Graphs.Kruskal.Vertex<T>> vertices) {
+    public boolean hasCycle(Vertex<T> vertices) {
 
         vertices.setVisiting(true);
 
