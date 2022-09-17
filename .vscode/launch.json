@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CourseSchedule",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.DirectedGrarphs.CourseSchedule",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch CycleDetection",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.DirectedGrarphs.CycleDetection",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch CourseSchedule",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.CourseSchedule",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch TopologicalSort",
             "request": "launch",
             "mainClass": "Sorting.Graphs.TopologicalSort",
