@@ -60,7 +60,7 @@ public class BitOps {
     public static void main(String[] args) {
         print(getithBitVal(8, 3)); // 1000
         print(setithBitVal(0, 0)); // turn on 0th bit for 0000 will become 0001 = 1
-        print(setithBitVal(0, 2)); // turn on 2nd bit for 0000 will become 0100 = 4
+        print(setithBitVal(0, x)); // turn on 2nd bit for 0000 will become 0100 = 4
         print(clearithBitVal(8, 3)); // becomes 0
         print(clearBitsStartingFromMSBThroughi(1, 1)); // clear all bits excep the ith bit which is 1 returns 1
         print(clearBitsStartingFromMSBThroughi(1, 0)); // clear all bits including 0th bit returns 0
