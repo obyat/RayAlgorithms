@@ -46,6 +46,7 @@ public class FlipBitToWin {
         int prevCount = 0;
         int count = 0;
         int maxlength = 1;
+        
         if ((~x) == 0)
             return Integer.BYTES * 8;
         while (x != 0) {
