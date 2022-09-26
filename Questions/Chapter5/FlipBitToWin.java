@@ -54,7 +54,7 @@ public class FlipBitToWin {
             if ((x & 1) == 1)
                 count++;
             else if ((x & 1) == 0) {
-                prevCount = (x & 2) == 0 ? 0 : count;
+                prevCount = (x & 2) == 0 ? 0 : count; // 2 = 10 = next bit it zero. If next bit is zero update to 0
                 count = 0;
             }
             maxlength = Math.max(prevCount + count + 1, maxlength);
