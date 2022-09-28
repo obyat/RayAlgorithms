@@ -8,7 +8,7 @@ import Generic.TESTSUIT;
 public class BoilerPlateClass {
 
     /*
-     * Chapter: 3, Question: .
+     * Chapter: , Question: .
      * 
      * Hints:
      */

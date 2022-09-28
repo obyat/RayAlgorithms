@@ -7,13 +7,16 @@ import java.util.ArrayList;
 
 import Chapter2.LinkedLists.DllNode;
 import DataStructures.Stack;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.*;
 
 public class TESTSUIT {
     // use Arrays.toString(array)
-    public static void assertTest(Object input, Object args, Object expected) {
+    public static <T> void assertTest(Object input, Object args, Object expected) {
         if (input != null) {
             String inputStr = "";
-            String expectedStr = "";
+            String expectedStr = "";    
 
             // stack
             if (input instanceof Stack) {
@@ -21,7 +24,7 @@ public class TESTSUIT {
                     System.out.println("[Passed] " + args);
                     return;
                 } else if (((Stack) input).isEmpty()) {
-                    System.out.println("[Failed] received: Empty Stack, for: " + args);
+                    System.out.println("[Failed] returned: Empty Stack, for: " + args);
                     return;
                 }
                 while (!((Stack) input).isEmpty()) {
@@ -29,7 +32,7 @@ public class TESTSUIT {
                     expectedStr += String.valueOf(((Stack) expected).peek()) + ", ";
                     if (!String.valueOf(((Stack) input).pop()).equals(String.valueOf(((Stack) expected).pop()))) {
                         System.out.println(
-                                "[Failed] expected: [" + expectedStr + "], received: [" + inputStr + "], for: " + args);
+                                "[Failed] expected: [" + expectedStr + "], returned: [" + inputStr + "], for: " + args);
                         return;
                     }
                 }
@@ -43,12 +46,12 @@ public class TESTSUIT {
                     System.out.println("[Passed] " + args);
                     return;
                 } else if (((Node) input).isEmpty()) {
-                    System.out.println("[Failed] received: Empty Node, for: " + args);
+                    System.out.println("[Failed] returned: Empty Node, for: " + args);
                     return;
                 } else if (!(((Node) input).isEmpty()) && !(compareNodes((Node) input, (Node) expected))) {
                     System.out.println(
                             "[Failed] expected: " + nodeToList((Node) expected, new ArrayList()) +
-                                    ", received: " + nodeToList((Node) expected, new ArrayList()) + ", for: "
+                                    ", returned: " + nodeToList((Node) expected, new ArrayList()) + ", for: "
                                     + args);
                     return;
                 }
@@ -57,7 +60,7 @@ public class TESTSUIT {
             }
 
             else if (!input.equals(expected)) {
-                System.out.println("[Failed] expected: " + expected + ", received: " + input + ", for: " + args);
+                System.out.println("[Failed] expected: " + expected + ", returned: " + input + ", for: " + args);
             } else {
                 System.out.println("[Passed] " + args);
             }
@@ -65,7 +68,7 @@ public class TESTSUIT {
             if (expected == null) {
                 System.out.println("[Passed] " + args);
             } else {
-                System.out.println("[Failed] expected: " + expected + ", received: null" + ", for: " + args);
+                System.out.println("[Failed] expected: " + expected + ", returned: null" + ", for: " + args);
             }
         }
 
