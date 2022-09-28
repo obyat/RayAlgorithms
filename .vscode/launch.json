@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Debugger",
+            "request": "launch",
+            "mainClass": "Chapter5.Debugger",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch NextNumber",
             "request": "launch",
             "mainClass": "Chapter5.NextNumber",
