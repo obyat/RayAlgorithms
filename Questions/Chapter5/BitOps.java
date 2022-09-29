@@ -60,15 +60,15 @@ public class BitOps {
     public static void main(String[] args) {
         print(getithBitVal(8, 3)); // 1000
         print(setithBitVal(0, 0)); // turn on 0th bit for 0000 will become 0001 = 1
-        print(setithBitVal(0, x)); // turn on 2nd bit for 0000 will become 0100 = 4
+        print(setithBitVal(0, 2)); // turn on 2nd bit for 0000 will become 0100 = 4
         print(clearithBitVal(8, 3)); // becomes 0
         print(clearBitsStartingFromMSBThroughi(1, 1)); // clear all bits excep the ith bit which is 1 returns 1
         print(clearBitsStartingFromMSBThroughi(1, 0)); // clear all bits including 0th bit returns 0
         print(clearBitsStartingFromMSBThroughi(8, 0)); // clear all bits including 0th bit returns 0
         print(clearBitsiThroughZero(8, 2)); // clearing all 0's behind 8 doesnt change its value
         print(clearBitsiThroughZero(15, 1)); // clearing all 0's behind 2nd index subtracts 3 from x
-        print(updateBit(10, 1, 0)); // 1000 + 0001 = 8 + 1 = 9
-           print(updateBit(10, 1, 0)); // 1000 + 0001 = 8 + 1 = 9
+        print(updateBit(10, 1, 0)); // 1010 + 1000 = 8
+        print(updateBit(10, 0, 1)); // 1010 + 1011 = 11
 
     }
 

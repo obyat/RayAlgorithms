@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PairwiseSwap",
+            "request": "launch",
+            "mainClass": "Chapter5.PairwiseSwap",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch Conversion",
             "request": "launch",
             "mainClass": "Chapter5.Conversion",
