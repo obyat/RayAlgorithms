@@ -6,7 +6,7 @@ import Utility.BitwiseUtil;
 public class PairwiseSwap {
 
     /*
-     * Chapter: 5, Question: 6.
+     * Chapter: 5, Question: 7.
      * Write a program to swap odd and even bits in an integer with as few
      * instructions as possible. E.g. bit 0 and 1 are swapped, bit 2 and bit 3 are
      * swapped, and so on.
