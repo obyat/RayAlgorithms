@@ -6,6 +6,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DrawLine",
+            "request": "launch",
+            "mainClass": "Chapter5.DrawLine",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch PairwiseSwap",
+            "request": "launch",
+            "mainClass": "Chapter5.PairwiseSwap",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Conversion",
+            "request": "launch",
+            "mainClass": "Chapter5.Conversion",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch Debugger",
+            "request": "launch",
+            "mainClass": "Chapter5.Debugger",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch NextNumber",
+            "request": "launch",
+            "mainClass": "Chapter5.NextNumber",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch FlipBitToWin",
+            "request": "launch",
+            "mainClass": "Chapter5.FlipBitToWin",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryInsertion",
+            "request": "launch",
+            "mainClass": "Chapter5.BinaryInsertion",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryToString",
+            "request": "launch",
+            "mainClass": "Chapter5.BinaryToString",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch BitOps",
+            "request": "launch",
+            "mainClass": "Chapter5.BitOps",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch CourseSchedule",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.DirectedGrarphs.CourseSchedule",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch CycleDetection",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.DirectedGrarphs.CycleDetection",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
+            "name": "Launch CourseSchedule",
+            "request": "launch",
+            "mainClass": "Chapter4.Graphs.CourseSchedule",
+            "projectName": "RayAlgorithms_7676a1be"
+        },
+        {
+            "type": "java",
             "name": "Launch TopologicalSort",
             "request": "launch",
             "mainClass": "Sorting.Graphs.TopologicalSort",
