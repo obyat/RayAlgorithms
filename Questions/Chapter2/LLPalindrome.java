@@ -1,4 +1,5 @@
 package Chapter2;
+
 import java.util.Stack;
 // asdjfsdj
 import Chapter2.LinkedLists.DllNode;
@@ -13,22 +14,24 @@ public class LLPalindrome {
      * Hints: 5,13,29,61,101
      * 
      * Examples:
-     *  1 0 1
+     * 1 0 1
      */
 
     // Runtime: O(Linkedlist.size()) runtime + O(1) space + O(1) stackspace
     public static boolean palindrome(DoublyLinkedList list) {
-        if(list == null ) return false;
-        if(list.size() == 1) return true;
+        if (list == null)
+            return false;
+        if (list.size() == 1)
+            return true;
         int size = list.size();
-        int midpoint = size/2;
+        int midpoint = size / 2;
         int i = 0;
         DllNode right = list.head;
         DllNode left = list.head;
 
-        while(right != null){
-            if(i == midpoint){ 
-                if(size % 2 == 0) {
+        while (right != null) {
+            if (i == midpoint) {
+                if (size % 2 == 0) {
                     left = right.prev;
                 } else {
                     left = right.prev;
@@ -36,8 +39,8 @@ public class LLPalindrome {
                 }
             }
 
-            if(i >= midpoint) {
-                if(right.data != left.data) 
+            if (i >= midpoint) {
+                if (right.data != left.data)
                     return false;
                 left = left.prev;
             }
@@ -47,27 +50,30 @@ public class LLPalindrome {
         return true;
     }
 
-    // Runtime: O(Linkedlist.size()+Linkedlist.size()) runtime + O(Linkedlist.size()) space + O(1) stackspace
+    // Runtime: O(Linkedlist.size()+Linkedlist.size()) runtime +
+    // O(Linkedlist.size()) space + O(1) stackspace
     public static boolean palindromeStack(DoublyLinkedList list) {
-        if(list == null) return false;
+        if (list == null)
+            return false;
 
         Stack<Integer> stack = new Stack<Integer>();
         DllNode fast = list.head;
-        DllNode slow = list.head; 
+        DllNode slow = list.head;
 
-        while(fast != null && fast.next != null){
+        while (fast != null && fast.next != null) {
             stack.push(slow.data);
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        if(fast != null) slow = slow.next;
+        if (fast != null)
+            slow = slow.next;
 
-        //when the first loop completes slow would be midway through the loop
-        while(slow!=null){
+        // when the first loop completes slow would be midway through the loop
+        while (slow != null) {
             int top = stack.pop().intValue();
 
-            if(top != slow.data){
+            if (top != slow.data) {
                 return false;
             }
             slow = slow.next;
@@ -75,56 +81,62 @@ public class LLPalindrome {
         return true;
     }
 
-        // The recursive method must return two values, therefore we can return an instance of an object which holds two values
-        class Result {
-            public DllNode node;
-            public boolean result;
-            public Result(DllNode node, boolean result) {
-                this.node = node;
-                this.result = result;
-            }
+    // The recursive method must return two values, therefore we can return an
+    // instance of an object which holds two values
+    class Result {
+        public DllNode node;
+        public boolean result;
 
+        public Result(DllNode node, boolean result) {
+            this.node = node;
+            this.result = result;
         }
 
-        public static int lengthOfList(DllNode n){
-            int size = 0;
-            while(n != null) {
-                size++;
-                n = n.next;
-            }
+    }
 
-            return size;
+    public static int lengthOfList(DllNode n) {
+        int size = 0;
+        while (n != null) {
+            size++;
+            n = n.next;
         }
 
-        public static boolean palindromeRecursion(DoublyLinkedList list) {
-            if(list == null ) return false;
-            int length = lengthOfList(list.head);
-            Result p = isPalindrome(list.head, length);
-            return p.result;
+        return size;
+    }
+
+    public static boolean palindromeRecursion(DoublyLinkedList list) {
+        if (list == null)
+            return false;
+        int length = lengthOfList(list.head);
+        Result p = isPalindrome(list.head, length);
+        return p.result;
+    }
+
+    // Runtime: O(Linkedlist.size()) runtime + O(1) space + O(LinkedList.size())
+    // stackspace
+    public static Result isPalindrome(DllNode head, int length) {
+        LLPalindrome outer = new LLPalindrome();
+        if (head == null || length <= 0) { // Even number of nodes
+            return outer.new Result(head, true);
+        } else if (length == 1) { // Odd number of nodes
+            return outer.new Result(head.next, true);
         }
-        // Runtime: O(Linkedlist.size()) runtime + O(1) space + O(LinkedList.size()) stackspace
-        public static Result isPalindrome(DllNode head, int length) {
-            LLPalindrome outer = new LLPalindrome();
-            if(head == null || length <= 0) { // Even number of nodes
-                return outer.new Result(head, true);
-            } else if(length == 1) { // Odd number of nodes
-                return outer.new Result(head.next, true);
-            }
-            // Recurse
-            Result res = isPalindrome(head.next, length - 2);
-            
-            // if child calls are not true pass back up the false/faliure return
-            if(!res.result || res.node == null) return res;
+        // Recurse
+        Result res = isPalindrome(head.next, length - 2);
 
-            // check if matches corresponding node on return
-            res.result = (head.data == res.node.data);
-
-            // return corresponding node
-            res.node = res.node.next;
-
+        // if child calls are not true pass back up the false/faliure return
+        if (!res.result || res.node == null)
             return res;
-        }
-    
+
+        // check if matches corresponding node on return
+        res.result = (head.data == res.node.data);
+
+        // return corresponding node
+        res.node = res.node.next;
+
+        return res;
+    }
+
     public static void main(String[] args) {
         DoublyLinkedList le = TESTSUIT.createLinkedList(new int[] {});
         DoublyLinkedList l0 = TESTSUIT.createLinkedList(new int[] { 4 });
@@ -206,21 +218,22 @@ public class LLPalindrome {
  * 3. Java source files can be viewed from directory
  * 4. Size starts with index 0 in LinkedLists similar to arrays.
  * 5. length is size() + 1
- * 6. If size() is not known, can have a fast runner at 2x speed 
- *    and store the slow 1x speed iterator in a linkedlist and compare the full list vs reversed linkedlist
+ * 6. If size() is not known, can have a fast runner at 2x speed
+ * and store the slow 1x speed iterator in a linkedlist and compare the full
+ * list vs reversed linkedlist
  * 
  * Mistakes:
  * 1. Assumed palindrome is [0123 0123] instead of [0123 3210]
-
- Midpoints:
-    Case Odd:
-        [1,0,1].size() = 3
-        3/2 = 1 => 0
-
-    Case Even:
-        [1,2,2,1].size() = 4
-        4/2 = 2 => Second 2
-    
-        Better to approach as even/odd and skip moving prev/left pointer if even
-
-  */
+ * 
+ * Midpoints:
+ * Case Odd:
+ * [1,0,1].size() = 3
+ * 3/2 = 1 => 0
+ * 
+ * Case Even:
+ * [1,2,2,1].size() = 4
+ * 4/2 = 2 => Second 2
+ * 
+ * Better to approach as even/odd and skip moving prev/left pointer if even
+ * 
+ */

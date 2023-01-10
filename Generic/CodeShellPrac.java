@@ -17,10 +17,11 @@ public class CodeShellPrac {
 
         // for (int[] log : logs)
         // print(log[1]);
+        print("TEST");
+        System.out.println(new int[] {}.length);
     }
 
-
     public static void print(Object o) {
-        System.out.println(o);
+        System.out.println();
     }
 }

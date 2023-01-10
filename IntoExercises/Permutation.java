@@ -1,10 +1,10 @@
 package IntoExercises;
 public class Permutation {
-
+    
     
     public static void permutation(String full){
         if(full.length() == 0 || full.equals(null)) 
-            System.out.println("Must input a valid word to permute of length > 0.");
+        System.out.println("Must input a valid word to permute of length > 0.");
         permute("", full);
         
     }
@@ -16,8 +16,8 @@ public class Permutation {
         }
         return;
     }
-
+    
     public static void main(String[] args) {
-        permutation("ABCD");
+        permutation("Ray");
     }
 }
