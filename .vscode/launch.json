@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CodeShellPrac",
+            "request": "launch",
+            "mainClass": "Generic.CodeShellPrac",
+            "projectName": "RayAlgorithms_1dd478e3"
+        },
+        {
+            "type": "java",
+            "name": "Launch RotateMatrix",
+            "request": "launch",
+            "mainClass": "RotateMatrix",
+            "projectName": "RayAlgorithms_1dd478e3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Permutation",
+            "request": "launch",
+            "mainClass": "IntoExercises.Permutation",
+            "projectName": "RayAlgorithms_1dd478e3"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckPermutation",
+            "request": "launch",
+            "mainClass": "CheckPermutation",
+            "projectName": "RayAlgorithms_1dd478e3"
+        },
+        {
+            "type": "java",
+            "name": "Launch LLPalindrome",
+            "request": "launch",
+            "mainClass": "Chapter2.LLPalindrome",
+            "projectName": "RayAlgorithms_1dd478e3"
+        },
+        {
+            "type": "java",
             "name": "Launch DrawLine",
             "request": "launch",
             "mainClass": "Chapter5.DrawLine",
